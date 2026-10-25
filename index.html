@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SB-SKILL V2.0｜20位跨領域單板專業教練團隊・單板滑雪全階段進階聖經 (L1–L8 旗艦擴充版)</title>
+  <title>SB-SKILL V3.0｜20位跨領域單板專業教練團隊・單板滑雪全階段進階聖經 (L0–L8 全整合旗艦版)</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,8 @@
             roseGlow: '#F43F5E'
           },
           fontFamily: {
-            sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
-            display: ['Outfit', 'Noto Sans TC', 'sans-serif']
+            sans: ['Noto Sans TC', 'Inter', sans-serif],
+            display: ['Outfit', 'Noto Sans TC', sans-serif]
           }
         }
       }
@@ -53,7 +53,7 @@
       transform: translateY(-2px);
       box-shadow: 0 12px 28px -8px rgba(56, 189, 248, 0.2);
     }
-    .stage-tab.active, .coach-filter-btn.active, .main-view-btn.active, .gt-tier-btn.active {
+    .stage-tab.active, .coach-filter-btn.active, .main-view-btn.active {
       background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%);
       color: #FFFFFF;
       border-color: #38BDF8;
@@ -84,10 +84,10 @@
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-[10px] uppercase tracking-widest text-sky-400 font-bold font-display">GITHUB: jonwenjen/SB-skill · V2.0 FLAGSHIP</span>
-              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">L1-L6 全面強化版</span>
+              <span class="text-[10px] uppercase tracking-widest text-sky-400 font-bold font-display">GITHUB: jonwenjen/SB-skill · V3.0 UNIFIED</span>
+              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">L0–L8 全整合旗艦版</span>
             </div>
-            <h1 class="text-sm sm:text-base font-extrabold text-white tracking-tight truncate">單板滑雪全階段進階聖經 V2.0｜Sam單板特訓 × Low Position 刻滑 × 平花16招</h1>
+            <h1 class="text-sm sm:text-base font-extrabold text-white tracking-tight truncate">單板滑雪全階段進階聖經 V3.0｜L0 雪場禮儀＆雪票 × L1 上下纜車 × L2–L8 全整合</h1>
           </div>
         </div>
         <button onclick="openGithubModal()" class="lg:hidden px-2.5 py-1.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/15 text-amber-300">
@@ -95,27 +95,18 @@
         </button>
       </div>
 
-      <!-- Navigation View Switcher -->
+      <!-- Unified Navigation View Switcher (No separate chapters outside L0-L8) -->
       <nav class="flex items-center gap-1.5 overflow-x-auto custom-scrollbar py-1">
-        <button id="nav-stages" onclick="switchMainSection('stages')" class="main-view-btn active px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          🏔️ L1–L8 階段學習書
+        <button id="nav-stages" onclick="switchMainSection('stages')" class="main-view-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
+          🏔️ L0–L8 全階段學習書 (全整合)
         </button>
-        <button id="nav-sam" onclick="switchMainSection('sam')" class="main-view-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          🎯 Sam單板・進階特訓 (6 Drills)
+        <button id="nav-coaches" onclick="switchMainSection('coaches')" class="main-view-btn px-3.5 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
+          👥 20人教練團 & 技術共識
         </button>
-        <button id="nav-carving" onclick="switchMainSection('carving')" class="main-view-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          🔪 Carving 低姿 & 8大招式
+        <button id="nav-passport" onclick="switchMainSection('passport')" class="main-view-btn px-3.5 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
+          ✅ 54項檢定護照 (<span id="header-pass-count">0/54</span>)
         </button>
-        <button id="nav-gratori" onclick="switchMainSection('gratori')" class="main-view-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          🌀 平花16招百科 (Owen/Sone/720)
-        </button>
-        <button id="nav-coaches" onclick="switchMainSection('coaches')" class="main-view-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          👥 20人教練團
-        </button>
-        <button id="nav-passport" onclick="switchMainSection('passport')" class="main-view-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800/70 text-slate-200 whitespace-nowrap transition">
-          ✅ 檢定護照 (<span id="header-pass-count">0/48</span>)
-        </button>
-        <button id="nav-github" onclick="openGithubModal()" class="hidden lg:inline-flex px-3 py-1.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 whitespace-nowrap transition">
+        <button id="nav-github" onclick="openGithubModal()" class="hidden lg:inline-flex px-3.5 py-1.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 whitespace-nowrap transition">
           🚀 GitHub 同步
         </button>
       </nav>
@@ -132,31 +123,37 @@
           <div class="space-y-3">
             <div class="flex flex-wrap items-center gap-2">
               <span class="px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-bold">
-                🔥 V2.0 旗艦升級：L1–L5 雙倍圖解與實戰 Drills
+                🆕 L0 雪票分類(4小時票)・雪場安全・日本禮儀
+              </span>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold">
+                🚡 L1 初學者上下纜車 8 步零摔倒 SOP
               </span>
               <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold">
-                🔪 Low Position 刻滑解剖 + 8大刻滑招
-              </span>
-              <span class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-300 text-xs font-bold">
-                🌀 平花 16 招 (Press/Ollie/Drive Spin/Sone/Owen/720)
+                🔥 Sam單板・Low Position 刻滑・平花16招直接併入 L2–L6
               </span>
             </div>
             <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight font-display leading-tight">
-              THE SNOWBOARD MASTERY BIBLE <span class="text-sky-400">V2.0 PRO</span>
+              THE SNOWBOARD MASTERY BIBLE <span class="text-sky-400">L0 – L8 UNIFIED</span>
             </h2>
             <p class="text-sm text-slate-300 leading-relaxed">
-              由 <strong class="text-white">20 位跨領域單板專業教練智庫</strong> 共編，全面強化 <strong class="text-sky-300">L1–L5 進階前教學與雙 SVG 解剖圖解（共 16 幅力學圖 + 35 部真實教學影片）</strong>，並新增三大專項聖經：<strong class="text-emerald-300">① 小紅書「Sam單板」6大進階滑行特訓</strong>、<strong class="text-amber-300">② Carving Low Position 真假低姿力學與 8 大刻滑招式（海豚跳／Reverse Turn／Euro-Carve）</strong>、<strong class="text-purple-300">③ 平花四階 16 招全圖鑑（從 Press/Ollie/Nollie 到 Drive Spin、Sone、Owen 至 Andy 540 & Nollie 720）</strong>。
+              由 <strong class="text-white">20 位跨領域單板專業教練智庫</strong> 共同編纂，將所有進階特訓與招式圖鑑<strong>直接無縫併入 L0–L8 九大階段</strong>：<strong class="text-sky-300">L0 雪場必備常識（4小時彈性票／點數券攻略、嚴禁坐雪道中間與坡頂盲區、日本雪場餐廳與板架倒扣禮儀）</strong> ➔ <strong class="text-emerald-300">L1 初學者省力起身與上下纜車 8 步分解 SOP</strong> ➔ <strong class="text-teal-300">L2–L4 併入小紅書「Sam單板」6大黃金練習</strong> ➔ <strong class="text-amber-300">L5 併入 Low Position 真假低姿解剖與 8 大刻滑招式</strong> ➔ <strong class="text-purple-300">L6 併入平花四階 16 招百科（Press/Ollie/Nollie、Drive Spin/Sone/Owen 至 Nollie 720）</strong> ➔ <strong class="text-rose-300">L7–L8 公園跳台與全山粉雪蘑菇</strong>。
             </p>
-            <!-- Quick Jump Pills -->
+            <!-- Quick Stage Jump Pills -->
             <div class="flex flex-wrap gap-2 pt-1">
-              <button onclick="switchMainSection('sam')" class="px-3 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 text-xs font-extrabold transition">
-                🎯 前往「Sam單板」進階滑行 6 大練習 ➔
+              <button onclick="switchMainSection('stages'); selectStage('L0');" class="px-3 py-1.5 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-sky-300 text-xs font-extrabold transition">
+                🎟️ L0 雪票(4小時票)・禁坐雪道中間・日本禮儀 ➔
               </button>
-              <button onclick="switchMainSection('carving')" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-extrabold transition">
-                🔪 前往 Carving Low Position & 8 大招式 ➔
+              <button onclick="switchMainSection('stages'); selectStage('L1');" class="px-3 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 text-xs font-extrabold transition">
+                🚡 L1 初學者上下纜車 8 步零摔倒特訓 ➔
               </button>
-              <button onclick="switchMainSection('gratori')" class="px-3 py-1.5 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/40 text-purple-300 text-xs font-extrabold transition">
-                🌀 前往平花 16 招 (Drive Spin / Sone / Owen / 720) ➔
+              <button onclick="switchMainSection('stages'); selectStage('L4');" class="px-3 py-1.5 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 border border-teal-400/40 text-teal-300 text-xs font-extrabold transition">
+                🎯 L3–L4 Sam單板進階練習 ➔
+              </button>
+              <button onclick="switchMainSection('stages'); selectStage('L5');" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-extrabold transition">
+                🔪 L5 Low Position 刻滑 8 招 ➔
+              </button>
+              <button onclick="switchMainSection('stages'); selectStage('L6');" class="px-3 py-1.5 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/40 text-purple-300 text-xs font-extrabold transition">
+                🌀 L6 平花 16 招 (Owen/Sone/720) ➔
               </button>
             </div>
           </div>
@@ -165,9 +162,9 @@
           <div class="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-4 space-y-2.5">
             <div class="flex items-center justify-between text-xs">
               <span class="font-bold text-slate-200 flex items-center gap-1.5">
-                🏆 個人單板技術檢定進度 (48-Point Skill Verification Passport)
+                🏆 個人單板技術檢定進度 (L0–L8 共 54 項量化考核)
               </span>
-              <span id="hero-progress-text" class="font-extrabold text-sky-400">已完成 0 / 48 項檢核 (0%)</span>
+              <span id="hero-progress-text" class="font-extrabold text-sky-400">已完成 0 / 54 項檢核 (0%)</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden p-0.5 border border-slate-700">
               <div id="hero-progress-bar" class="h-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-500 rounded-full transition-all duration-300" style="width: 0%"></div>
@@ -175,7 +172,7 @@
             <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-[11px] text-slate-400">
               <span id="hero-rank-badge">目前認證段位：🌱 準備上雪 (Pre-Snow Rookie)</span>
               <div class="flex items-center gap-2">
-                <button onclick="switchMainSection('passport')" class="text-sky-400 hover:text-sky-300 font-bold underline">開啟 48 項完整檢定打分表 ➔</button>
+                <button onclick="switchMainSection('passport')" class="text-sky-400 hover:text-sky-300 font-bold underline">開啟 L0–L8 共 54 項完整檢定打分表 ➔</button>
               </div>
             </div>
           </div>
@@ -186,15 +183,15 @@
           <img src="data:image/jpeg;base64,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" alt="Snowboard Euro-Carve Hero" class="w-full h-full object-cover max-w-full" />
           <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
           <div class="absolute bottom-4 left-4 right-4 bg-obsidian/85 backdrop-blur-md border border-slate-700/80 rounded-xl p-3">
-            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">V2.0 Featured · Low Position & Ground Trick</div>
-            <div class="text-xs text-slate-200 font-medium mt-0.5">三關節極限折疊 Low Position 走刃 × 日系平花 Owen / Sone / Nollie 720 完整力學圖鑑</div>
+            <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">V3.0 Unified · L0 Etiquette to L8 All-Mountain</div>
+            <div class="text-xs text-slate-200 font-medium mt-0.5">從 L0 雪票禮儀、L1 上下纜車零摔倒，到 Sam單板、Low Position 刻滑與平花 16 招全整合</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 1: L1-L8 PROGRESSIVE LEARNING BOOK -->
+    <!-- SECTION 1: L0-L8 PROGRESSIVE LEARNING BOOK -->
     <!-- ========================================== -->
     <section id="section-stages" class="space-y-6">
       <!-- Stage Selector Bar -->
@@ -202,132 +199,25 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h3 class="text-base font-extrabold text-white flex items-center gap-2">
-              <span>🧭 選擇學習階段 (Stages L1 – L8 深度擴充版)</span>
+              <span>🧭 選擇學習階段 (Stages L0 – L8 全整合聖經)</span>
             </h3>
-            <p class="text-xs text-slate-400">L1–L5 均已擴充至 6 大實戰技巧、雙幅生物力學 SVG 圖解、4–8 部實拍教學影片與 6 項晉級考核</p>
+            <p class="text-xs text-slate-400">所有進階練習（Sam單板）、Low Position 刻滑 8 招與平花 16 招已直接併入對應之 L0–L8 階段內</p>
           </div>
           <div class="flex items-center gap-2">
             <button id="btn-mode-single" onclick="setStageDisplayMode('single')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40">單章精讀模式</button>
-            <button id="btn-mode-all" onclick="setStageDisplayMode('all')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700">展開全部 L1–L8</button>
+            <button id="btn-mode-all" onclick="setStageDisplayMode('all')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700">展開全部 L0–L8</button>
           </div>
         </div>
 
-        <div id="stage-tabs-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 pt-1"></div>
+        <div id="stage-tabs-container" class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-2 pt-1"></div>
       </div>
 
       <!-- Stages Content Container -->
       <div id="stages-render-container" class="space-y-10"></div>
     </section>
 
-    <!-- ==================================================== -->
-    <!-- SECTION 2: SAM SNOWBOARD ADVANCED DRILLS MATRIX      -->
-    <!-- ==================================================== -->
-    <section id="section-sam" class="hidden space-y-6">
-      <div class="glass-card rounded-3xl p-6 sm:p-8 border border-emerald-500/40 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Sam Snowboard Progressive Drills System</span>
-            <h3 class="text-xl sm:text-3xl font-black text-white mt-1">🎯 進階滑行特訓：參考小紅書「Sam單板」6大黃金練習處方</h3>
-            <p class="text-xs sm:text-sm text-slate-300 mt-1">針對 L2–L5 滑手最常卡關的「折腰翹臀、滾落線後才換刃、甩後手踢後腳、萬年搓雪無法走刃」，提供雪場實測最有效的 6 組漸進式糾錯練習。</p>
-          </div>
-          <button onclick="switchMainSection('stages'); selectStage('L4');" class="px-3.5 py-2 rounded-xl bg-emerald-500 text-slate-950 font-extrabold text-xs shrink-0 self-start">
-            🏔️ 搭配 L4 進階滑行章節閱讀 ➔
-          </button>
-        </div>
-
-        <!-- Sam Drills Visual SVG Overview -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-2">
-            <div id="sam-svg-box-1"></div>
-            <p class="text-xs text-emerald-300 font-semibold">📐 圖解 A｜Sam單板核心：「滾落線前提前換刃 (Early Edge Change)」vs「傳統延遲換刃」軌跡對比</p>
-          </div>
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-2">
-            <div id="sam-svg-box-2"></div>
-            <p class="text-xs text-sky-300 font-semibold">📐 圖解 B｜Sam單板核心：「1-5-8 三段漸進加壓」與「3公尺壓雪線走廊上下身分離小迴轉」</p>
-          </div>
-        </div>
-
-        <!-- 6 Drills Cards -->
-        <div id="sam-drills-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
-      </div>
-    </section>
-
-    <!-- ==================================================== -->
-    <!-- SECTION 3: CARVING LOW POSITION & 8 TRICKS CATALOG   -->
-    <!-- ==================================================== -->
-    <section id="section-carving" class="hidden space-y-6">
-      <div class="glass-card rounded-3xl p-6 sm:p-8 border border-amber-500/40 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Carving Low Position Biomechanics & 8 Pro Styles</span>
-            <h3 class="text-xl sm:text-3xl font-black text-white mt-1">🔪 Carving 刻滑聖經：Low Position 深度解剖與 8 大刻滑招式</h3>
-            <p class="text-xs sm:text-sm text-slate-300 mt-1">徹底搞懂為何 90% 的人做成「彎腰摸雪假低姿」，掌握前後刃真低姿關節角度、ラマ流板尾彈射、海豚跳与 Reverse Turn 逆向刻滑！</p>
-          </div>
-          <button onclick="switchMainSection('stages'); selectStage('L5');" class="px-3.5 py-2 rounded-xl bg-amber-500 text-slate-950 font-extrabold text-xs shrink-0 self-start">
-            🏔️ 搭配 L5 刻滑專精章節閱讀 ➔
-          </button>
-        </div>
-
-        <!-- Low Position Anatomy SVG & Core Principles -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <div class="lg:col-span-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between">
-            <div id="carving-low-svg-box"></div>
-            <div class="pt-3 text-xs text-amber-300 font-semibold border-t border-slate-800 mt-2">
-              📐 Low Position 真假低姿解剖對比：踝32°+膝105°+胸朝板頭 vs 折腰90°摸雪失壓
-            </div>
-          </div>
-          <div class="lg:col-span-6 space-y-3" id="carving-principles-list"></div>
-        </div>
-
-        <!-- 8 Carving Tricks Grid -->
-        <div class="space-y-3 pt-2">
-          <h4 class="text-lg font-extrabold text-white flex items-center gap-2">
-            <span>🔥 Carving 8 大進階與花式刻滑招式圖鑑 (8 Signature Carving Tricks)</span>
-          </h4>
-          <div id="carving-tricks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================================================== -->
-    <!-- SECTION 4: GROUND TRICK 16-TRICK ENCYCLOPEDIA        -->
-    <!-- ==================================================== -->
-    <section id="section-gratori" class="hidden space-y-6">
-      <div class="glass-card rounded-3xl p-6 sm:p-8 border border-purple-500/40 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-purple-400">Ground Trick (グラトリ) 4-Tier 16-Trick Encyclopedia</span>
-            <h3 class="text-xl sm:text-3xl font-black text-white mt-1">🌀 平花全招式百科：從 Press/Ollie/Nollie、Drive Spin/Sone/Owen 到 Nollie 720</h3>
-            <p class="text-xs sm:text-sm text-slate-300 mt-1">完整收錄基礎、入門、進階、超進階共 16 個代表性招式之四拍子拆解、甜蜜點支點軌跡圖與防卡刃關鍵。</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5" id="gt-tier-filter-bar">
-            <button onclick="filterGtTier('ALL')" data-tier="ALL" class="gt-tier-btn active px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">全部四階 (16招)</button>
-            <button onclick="filterGtTier('0')" data-tier="0" class="gt-tier-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">Tier 1 基本功</button>
-            <button onclick="filterGtTier('1')" data-tier="1" class="gt-tier-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">Tier 2 入門 (Drive/Sone/Owen)</button>
-            <button onclick="filterGtTier('2')" data-tier="2" class="gt-tier-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">Tier 3 進階 (360/Andy)</button>
-            <button onclick="filterGtTier('3')" data-tier="3" class="gt-tier-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">Tier 4 超進階 (540/720/ロデアン)</button>
-          </div>
-        </div>
-
-        <!-- Ground Trick Visual SVG Diagrams -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-2">
-            <div id="gt-svg-box-1"></div>
-            <p class="text-xs text-purple-300 font-semibold">📐 圖解 A｜Ollie / Nollie 四階段槓桿點板彈跳力學與 Press 甜蜜點 (Sweet Spot)</p>
-          </div>
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-2">
-            <div id="gt-svg-box-2"></div>
-            <p class="text-xs text-sky-300 font-semibold">📐 圖解 B｜Drive Spin（陀螺360）、Sone（後跟➔前尖對角正轉）與 Owen（正轉180急停反擰➔逆轉360）步進圖</p>
-          </div>
-        </div>
-
-        <!-- 16 Tricks Tier Containers -->
-        <div id="gt-tiers-container" class="space-y-8"></div>
-      </div>
-    </section>
-
     <!-- ========================================== -->
-    <!-- SECTION 5: 20 COACHES & ROUND-TABLE DEBATE -->
+    <!-- SECTION 2: 20 COACHES & ROUND-TABLE DEBATE -->
     <!-- ========================================== -->
     <section id="section-coaches" class="hidden space-y-8">
       <!-- Round-Table Consensus Block -->
@@ -353,7 +243,7 @@
           </div>
           <div class="flex flex-wrap gap-1.5" id="coach-filter-bar">
             <button onclick="filterCoaches('ALL')" data-filter="ALL" class="coach-filter-btn active px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">全部 (20)</button>
-            <button onclick="filterCoaches('BASIC')" data-filter="BASIC" class="coach-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">基礎與Sam特訓 (L1–L4)</button>
+            <button onclick="filterCoaches('BASIC')" data-filter="BASIC" class="coach-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">新手與基礎進階 (L0–L4)</button>
             <button onclick="filterCoaches('CARVE')" data-filter="CARVE" class="coach-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">刻滑專精 (L5)</button>
             <button onclick="filterCoaches('FREE')" data-filter="FREE" class="coach-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">平花與公園 (L6–L7)</button>
             <button onclick="filterCoaches('MTN')" data-filter="MTN" class="coach-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-800 text-slate-200">大山粉雪蘑菇 (L8)</button>
@@ -365,14 +255,14 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 6: VERIFICATION PASSPORT & RUBRIC  -->
+    <!-- SECTION 3: VERIFICATION PASSPORT & RUBRIC  -->
     <!-- ========================================== -->
     <section id="section-passport" class="hidden space-y-6">
       <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Quantitative Verification Standards (48 Items)</span>
-            <h3 class="text-xl sm:text-2xl font-black text-white mt-1">✅ L1–L8 全階段 48 項量化晉級檢定護照</h3>
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Quantitative Verification Standards (54 Items)</span>
+            <h3 class="text-xl sm:text-2xl font-black text-white mt-1">✅ L0–L8 全階段 54 項量化晉級檢定護照</h3>
             <p class="text-xs text-slate-400 mt-1">勾選你已通過的檢定項目，系統將自動計算你的單板段位並支援匯出 Markdown 檢定報告</p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -401,7 +291,7 @@
 
       <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 space-y-2 text-xs">
         <div class="font-bold text-emerald-300 flex items-center gap-2">
-          <span>✅ V2.0 旗艦版已同步至 GitHub Pages 與 Google Drive</span>
+          <span>✅ V3.0 (L0–L8 全整合版) 已同步至 Google Drive 與 GitHub</span>
         </div>
         <p class="text-slate-300 leading-relaxed">
           線上互動網址：<a href="https://jonwenjen.github.io/SB-skill/" target="_blank" rel="noopener" class="text-sky-300 underline font-bold">https://jonwenjen.github.io/SB-skill/</a> ｜ 儲存庫：<a href="https://github.com/jonwenjen/SB-skill" target="_blank" rel="noopener" class="text-amber-300 underline font-bold">https://github.com/jonwenjen/SB-skill</a>
@@ -456,16 +346,16 @@
 
   <footer class="border-t border-slate-800/80 py-6 mt-12 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <span>🏂 SB-SKILL V2.0 · 20-Coach Snowboard Mastery Book (L1–L8 Flagship Edition)</span>
+      <span>🏂 SB-SKILL V3.0 · 20-Coach Snowboard Mastery Book (L0–L8 Unified Edition)</span>
       <span>GitHub Pages: <a href="https://jonwenjen.github.io/SB-skill/" target="_blank" rel="noopener" class="text-sky-400 hover:underline">jonwenjen.github.io/SB-skill</a> ｜ Repo: <a href="https://github.com/jonwenjen/SB-skill" target="_blank" rel="noopener" class="text-sky-400 hover:underline">github.com/jonwenjen/SB-skill</a></span>
     </div>
   </footer>
 
   <script>
     const BOOK_DATA = {
-  "book_title": "SB-SKILL V2.0｜20位跨領域單板教練團隊・單板滑雪全階段進階聖經 (L1–L8 旗艦擴充版)",
-  "trip_title": "SB-SKILL V2.0｜20位跨領域單板教練團隊・單板滑雪全階段進階聖經 (L1–L8 旗艦擴充版)",
-  "version": "2026.10 V2.0 Flagship Edition (L1-L5 深度擴充 + Sam單板特訓 + Carving Low Position 8招 + 平花16招百科)",
+  "book_title": "SB-SKILL V3.0｜20位跨領域單板教練團隊・單板滑雪全階段進階聖經 (L0–L8 全整合旗艦版)",
+  "trip_title": "SB-SKILL V3.0｜20位跨領域單板教練團隊・單板滑雪全階段進階聖經 (L0–L8 全整合旗艦版)",
+  "version": "2026.11 V3.0 Unified Edition (新增 L0 雪場禮儀與雪票攻略 + L1 上下纜車特訓 + Sam單板/Low Position刻滑/平花16招直接併入 L0–L8)",
   "github_meta": {
     "owner": "jonwenjen",
     "repo": "SB-skill",
@@ -481,6 +371,7 @@
       "domain": "日式基礎滑行、Low Position 低姿折曲與刻滑體系 (JSBA/SAJ Carving)",
       "cert": "JSBA Tech Examiner / SAJ Demonstrator",
       "lead_stages": [
+        "L0",
         "L3",
         "L5"
       ],
@@ -494,6 +385,7 @@
       "domain": "北美漸進式教學法與下肢獨立扭轉導向 (CASI Pedagogy & Torsional Twist)",
       "cert": "CASI Level 4 Evaluator",
       "lead_stages": [
+        "L0",
         "L1",
         "L2",
         "L3"
@@ -652,6 +544,7 @@
       "domain": "雪板結構力學、Binding 角度/Highback 設定、鋼邊角度與打蠟調校",
       "cert": "FIS Alpine Snowboard Coach & Master Bootfitter",
       "lead_stages": [
+        "L0",
         "L1",
         "L5"
       ],
@@ -692,6 +585,7 @@
       "domain": "遊戲化直覺本體感覺訓練、外在焦點提示法 (External Cues)",
       "cert": "SBINZ Level 3 & Groms Academy Director",
       "lead_stages": [
+        "L0",
         "L1",
         "L2"
       ],
@@ -720,6 +614,7 @@
       "domain": "盲區防撞意識、FIS 雪道十條安全守則、安全跌倒 (Ukemi 受身)",
       "cert": "International Ski Patrol & Emergency Rescue Lead",
       "lead_stages": [
+        "L0",
         "L1",
         "L2",
         "L7"
@@ -1064,10 +959,154 @@
   ],
   "stages": [
     {
+      "id": "L0",
+      "code": "STAGE L0",
+      "name": "雪場基本注意事項：雪票攻略（4小時票）、雪場安全鐵律、日本禮儀與新手穿戴",
+      "en_name": "Resort Essentials, Lift Ticket Strategy (4-Hour Pass), Slope Etiquette & Japanese Manners",
+      "badge_color": "sky",
+      "slope_target": "雪具租借站、售票處、雪場餐廳與纜車排隊區（上雪前必修）",
+      "recommended_Hours": "上雪前 1 小時（行前必讀 & 第一天報到）",
+      "lead_coaches": [
+        "金荷娜 (雪場安全巡邏隊長)",
+        "高橋健司 (JSBA A級考官)",
+        "Liam Vance (CASI Lv4)",
+        "Wolfgang Bauer (器材調校大師)"
+      ],
+      "coach_summary": "第一次踏進日本或國際雪場，高達 80% 的危險與尷尬都發生在「還沒開始滑」或「坐在雪道中間休息」的時候！L0 專為初學者與赴日滑雪者打造：從最省錢實用的雪票分類（特別是「4小時彈性時間券」與「初學者點數券」精算）、絕對不可坐在雪道中間與坡頂盲區的保命鐵律、日本雪場餐廳／板架／溫泉禮儀，到新手正確穿雪靴防小腿瘀青與纜車排隊基本認知，讓你從踏入雪場第一秒就像個內行人。",
+      "image_key": "stance",
+      "image_caption": "圖 L0-A｜上雪前黃金整備：正確穿戴安全帽與護具、雪板倒扣放置防滑走、左臂放置感應式 IC 雪票。",
+      "svg_type": "l0_tickets_and_etiquette",
+      "svg_caption": "圖 L0-B｜日本雪場 5 大雪票分類（4小時時間券 vs 點數券 vs 一日券）精算與日本餐廳／板架禮儀圖解",
+      "svg_type_2": "l0_slope_blindspots_and_gear",
+      "svg_caption_2": "圖 L0-C｜雪道安全紅線：嚴禁坐在雪道中間與坡頂盲區 (Blind Rollover) vs 正確兩側停靠區與雪靴穿法",
+      "skills": [
+        {
+          "name": "1. 雪票分類全解析與「4小時票 (4-Hour Pass)」聰明買法 (Lift Ticket Strategy)",
+          "steps": "日本與國際雪場常見 5 種雪票，初學者千萬別無腦買全山一日券：①【4小時券／時間券 (4-Hour Flex Pass)】CP值最高！從你「第一次刷過纜車感應閘門」那秒才開始計算連續 4 小時（例如 10:15 刷進，可滑到 14:15），比固定時段的「上午券 (8:30–12:30)」更有彈性，早上能睡飽、避開尖峰，滑滿 4 小時大腿剛好力竭收工；②【點數券／回數券 (Point Ticket / 1-Ride Ticket)】極度推薦「完全零基礎第一天新手」！因為前 2 小時都在平地與緩坡練習單腳與推坡，買 2～3 次回數券比買一日券省下超過一半費用；③【一日券 (1-Day Pass) 與夜滑券 (Nighter)】一日券適合已會 S-Turn、全天滑超過 5 小時者（注意一般一日券僅到 16:30–17:00，不含 17:00 後的夜滑）；④【初學者魔毯專用券 (Beginner Area / Magic Carpet Pass)】部分日本雪場（如苗場、輕井澤、手稻）設有便宜的新手魔毯區專用票；⑤【IC 卡感應與押金規範】日本多採用 Keycard 感應卡（常含 ¥500 押金，最後一天放入自動退卡機可退還 ¥500 現金），請務必放在「雪衣左臂專用拉鍊小口袋」，嚴禁與手機、信用卡、金屬鑰匙或暖暖包放在同一個口袋（會消磁或阻斷感應導致卡在閘門口）！"
+        },
+        {
+          "name": "2. 雪道保命鐵律：絕對不可以坐在雪道中間與坡頂盲區 (Never Sit in Middle or Blind Spots)",
+          "steps": "這是雪場巡邏隊最常開罰與發生重傷的頭號原因！①【嚴禁坐在雪道正中間】雪道中間是高速滑行的主幹道，一排人橫坐在雪道中間就像在高速公路路中央野餐；②【最致命禁區：陡坡變緩坡的坡頂下方 (Blind Rollover / Knoll)】從上方滑下來的人視線被坡頂擋住，完全看不見坡頂正下方坐著的人，一旦飛躍下來就是直接撞擊頭部！③【正確休息與等待位置】摔倒後若無受傷，請在 5 秒內移動到「雪道最左或最右側邊緣（距離防護網或樹林 1–2 公尺內，且上方視野完全暢通處）」；④【FIS 國際雪道優先權鐵律】「前方（山下）滑手擁有絕對優先路權 (Downhill Skier Has Right-of-Way)」，後方（山上）滑手必須主動避開前方新手；但當你從雪道邊緣準備「起步」或「從支線匯入主雪道」時，**必須 100% 轉頭往山坡上方確認沒有高速來人**才能出發！"
+        },
+        {
+          "name": "3. 日本雪場專屬禮儀：戶外板架、餐廳不佔位、自助返却口與溫泉文化 (Japanese Resort Manners)",
+          "steps": "去日本滑雪必守的在地禮儀：①【雪板倒扣鐵律与戶外板架】在雪地上暫時脫下雪板時，**100% 必須將雪板翻過來「倒扣（固定器朝下壓入雪中）」**，絕不可板底朝下平放（雪板一旦滑走會變成時速 70km/h 的無頭血滴子砍傷下方遊客，在日本需負高額民事與刑事賠償！）；進餐廳前必須把雪板直立放在門外的「板架 (Board Rack)」，並用門口的刷子與高壓氣槍把雪靴底部的積雪徹底拍乾淨再進室內；②【餐廳嚴禁物品佔位 (場所取り禁止)】日本雪場餐廳中午極忙碌，嚴禁先丟手套、毛帽或背包在空桌上佔位再去排隊（除了預留付費席外），請先排隊點餐端著托盤再找位子，或由同行不點餐者直接入座；③【自助分類歸還 (返却口)】用完餐必須親自端起托盤送到「返却口 (Return Counter)」，將廚餘、塑膠杯、紙巾、餐具分類投入並擦淨桌面；④【乾燥室與溫泉禮儀】雪板帶回飯店「乾燥室 (Drying Room)」前必須先用乾布擦乾水份（防止鋼邊一晚生鏽）；泡溫泉前必須在座位區徹底洗淨身體、毛巾不可浸入溫泉池內。"
+        },
+        {
+          "name": "4. 初學者洋蔥式穿戴、四大護具與「雪靴防小腿劇痛」穿法 (Layering, Armor & Boot Fit)",
+          "steps": "新手第一天常見因為穿錯衣服或雪靴而痛苦退場：①【三層洋蔥穿法 (3-Layer System)】內層穿排汗快乾衣褲（**絕對禁穿純棉 T 恤或牛仔褲**，流汗濕透後吹風會瞬間失溫）、中層穿刷毛衣 (Fleece) 或輕薄化纖背心、外層穿防水透氣雪衣雪褲（防水 10,000mm+）；②【初學者保命四大護具】安全帽（Helmet 必戴，毛帽不能防撞擊）、防摔褲（Hip Pad 保護尾椎與坐骨）、護膝（Knee Pad 保護前刃跪姿）、護腕（Wrist Guard 防撐地骨折）；③【雪靴黃金穿法：雪靴內只准有兩樣東西！】小腿脛骨會痛到懷疑人生的元兇，就是把雪褲防雪裙或兩雙襪子塞進雪靴裡！記住鐵律：**雪靴裡面只准有「你的腳＋1雙高筒滑雪長襪」**（緊身排汗褲若過長請拉到小腿肚以上或買七分款），雪褲內層有鬆緊帶的「防雪裙 (Powder Gaiter)」必須套在雪靴外殼的最外面！"
+        },
+        {
+          "name": "5. 初學者雪場地圖判讀、避開平坦連絡道與緊急求救 SOP (Trail Map & Emergency SOS)",
+          "steps": "①【看懂雪道分級顏色】日本與亞洲雪場：🟢綠色＝初級道 (Beginner 5°–12°)、🔴紅色＝中級道 (Intermediate 13°–22°)、⚫黑色＝高級道 (Expert 25°–40°+)；歐美雪場則是🟢綠圓 ➔ 🟦藍方 ➔ ♦️黑鑽；②【單板新手的隱形陷阱：平坦林間連絡道 (Cat Track / Flat Connecting Run)】地圖上標示細細長長、坡度極緩（<3°）的林間道，對雙板很輕鬆，但對還不會穩定換刃的單板新手來說「一減速就停住、被迫脫板在深雪裡走路半小時，旁邊還是山谷」！第一天請鎖定「寬敞、坡度均勻（6°–10°）的主綠線」；③【雪道意外求救三步驟】若自己或同伴受傷無法移動：(a) 先在傷者**正上方 5–10 公尺處將雪板直插在雪中（或交叉擺放）**作為路障警示上方來車；(b) 記下雪道邊緣柱子上的「雪道名稱與號碼牌（如 A-3）」；(c) 撥打雪票背面印製的「Ski Patrol / パトロール（雪場救援隊）」電話求救。"
+        },
+        {
+          "name": "6. 首次排隊搭纜車前 4 大準備與共乘禮儀 (Pre-Chairlift Queue Checklist)",
+          "steps": "在前往纜車排隊口前，必須在平地完成 4 項檢查：①【前腳綁緊、後腳完全解開】所有開放式吊椅纜車 (Chairlift) 嚴禁雙腳同時綁在雪板上搭乘（只有廂型纜車 Gondola 是雙腳脫板手抱雪板搭乘）；②【折平後腳固定器高背板 (Fold Down Rear Highback)】這點超重要！把沒綁的後腳固定器高背板往前「啪」一聲折平蓋住底座，否則過纜車時高高的背板會勾住纜車椅底部導致摔車；③【確認腳繩 (Leash) 與防滑墊 (Stomp Pad)】將防流放腳繩扣在前小腿或雪靴上，並刷掉兩固定器中間防滑墊上的積雪；④【日本纜車禮儀】排隊時雪板與隊伍平行推進，不要左右甩尾踩傷前人板面；人多時主動配合共乘（相乗り），拉下安全護欄前大喊一聲「Bar Down / バー降ろします（要拉護欄囉）」，避免護欄直接敲到旁邊乘客的安全帽！"
+        }
+      ],
+      "awareness": {
+        "vision": "【360度全景雷達意識】在雪道上養成「每停下來一次、每準備起步一次，必定先轉頭看上方山坡 3 秒鐘」的反射動作；進入雪道變陡處或轉彎處前，預判下方是否有盲區。",
+        "proprioception": "【裝備零壓迫與前後腳配重感】穿好雪靴站立時，感受腳趾輕觸靴頭、微屈膝時腳趾自然退開、腳跟死死鎖在靴跟杯內，小腿前側無任何衣服皺褶異物壓迫感。",
+        "mindset": "【安全與禮貌優先於耍帥】理解雪場是高速共享空間，遵守雪道優先權、雪板隨時倒扣、不在雪道中央逗留，不僅保護自己不挨撞，更是贏得全雪場尊重的第一步。"
+      },
+      "standards": [
+        "【雪票與IC卡標準】能根據當日滑行時數精準選購點數券或 4 小時彈性券，並將 IC 雪票正確置於左臂專用袋，過閘機 1 秒順暢感應。",
+        "【停靠位置標準】全程滑行與練習中，100% 停靠於雪道左右兩側邊緣 1.5 公尺內且上方視野開闊處，0 次坐在雪道中央或坡頂盲區下方。",
+        "【防流放倒扣標準】只要雙腳脫離雪板（拍照、休息、上廁所），100% 在 2 秒內將雪板翻面「倒扣於雪地」或直立插於戶外板架。",
+        "【雪靴與護具標準】安全帽、防摔褲、護膝、護腕穿戴齊全，雪靴內僅有 1 雙高筒雪襪，防雪裙套於靴外，滑行 4 小時小腿無壓迫紅腫。",
+        "【日本雪場禮儀標準】進餐廳前 100% 清刷靴底積雪、不以隨身物品霸佔空位、用餐後自助將餐盤分類歸還至返却口。",
+        "【纜車排隊整備標準】進入纜車排隊閘門前，100% 完成「前腳綁緊、後腳解開、後固定器 Highback 往前折平、防滑墊清雪」四項檢查。"
+      ],
+      "precautions_and_tips": {
+        "warnings": [
+          "🚫 【致命紅線 1】絕對禁止坐在雪道正中間、轉彎死角或陡坡變緩坡的坡頂下方 (Blind Rollover)！上方滑手飛躍坡頂時完全看不見你，每年雪場最嚴重的撞擊事故皆發生於此。",
+          "🚫 【致命紅線 2】脫下雪板時嚴禁將「板底朝下」平放在雪地上！雪板沒有剎車器（不像雙板有止滑鉤），一旦滑下山就是時速 70 公里的利刃凶器。",
+          "🚫 【裝備紅線 3】嚴禁穿兩雙襪子或把厚雪褲塞進雪靴內！這會造成小腿脛骨劇烈壓迫性骨膜炎，讓你在第一天中午前就痛到無法站立。"
+        ],
+        "tips": [
+          "💡 【4小時票省錢神技】第一天若已經會基本滑行，早上先在雪場外拍美照、吃早午餐或免費平地熱身，10:30 再刷「4小時券」進場滑到 14:30，體力最充沛且避開早上 8:30 排隊人潮！",
+          "💡 【防手機失溫斷電 Tip】雪場低溫會讓 iPhone 電量在 20 分鐘內從 80% 瞬間掉到關機；請在手機背面貼一片「貼式暖暖包」並放在貼身內袋（但切記別跟 IC 雪票放同一袋）。",
+          "💡 【日本餐廳避開尖峰 Tip】日本雪場餐廳 11:45–13:15 人潮最滿，建議提早於 11:00 或延後至 13:30 用餐，既不用排隊又能享受在 12:00–13:00 空曠無人的黃金雪道練功！"
+        ]
+      },
+      "videos": [
+        {
+          "title": "How To Snowboard For The First Time (Complete Beginner Guide & Etiquette)",
+          "channel": "SnowboardProCamp",
+          "views": "2.4M+ views",
+          "video_id": "isFO112WbNH",
+          "url": "https://www.youtube.com/watch?v=qHy-goO6vGQ",
+          "focus": "初學者第一次進雪場必看：從穿戴雪靴、雪板倒扣防流放、省力起身秘訣到雪道基本安全守則。"
+        },
+        {
+          "title": "How To Survive the Chairlift - Beginner Snowboarding",
+          "channel": "SnowboardProCamp",
+          "views": "826K+ views",
+          "video_id": "wl7sIvMgrqg",
+          "url": "https://www.youtube.com/watch?v=wl7sIvMgrqg",
+          "focus": "初學者搭纜車生存聖經：排隊動線、折平後固定器 Highback、上下纜車完整慢動作示範。"
+        },
+        {
+          "title": "5 Tips for Riding the Chairlift - Beginner Snowboarding",
+          "channel": "SnowboardProCamp",
+          "views": "74K+ views",
+          "video_id": "a9e2uCQHbjw",
+          "url": "https://www.youtube.com/watch?v=a9e2uCQHbjw",
+          "focus": "搭纜車 5 大實用細節：如何在椅子上托住雪板保護前膝、下纜車前如何對準板頭與安全滑出。"
+        },
+        {
+          "title": "Beginner Snowboard Progression (Day 1 Setup & Fundamentals)",
+          "channel": "Malcolm Moore",
+          "views": "890K+ views",
+          "video_id": "bfL15ef3BEs",
+          "url": "https://www.youtube.com/watch?v=bfL15ef3BEs",
+          "focus": "英國頂級教練詳解第一天上雪前的器材設定、安全受身與雪道邊緣練習規範。"
+        }
+      ],
+      "verification_rubric": {
+        "pass_score": "6項雪場基本安全與日本禮儀考核全數通過（100% 必達）始得進入 L1 雪上滑行",
+        "items": [
+          {
+            "code": "L0-V1",
+            "item": "雪票選擇與 IC 卡正確放置",
+            "criterion": "理解 4 小時時間券、點數券與一日券差異，並將 IC 雪票單獨置於左臂雪衣口袋（不與手機/信用卡同放）。"
+          },
+          {
+            "code": "L0-V2",
+            "item": "雪道邊緣停靠與盲區迴避鐵律",
+            "criterion": "能正確指出雪道坡頂盲區 (Blind Rollover)，並承諾休息、摔倒或綁板時 100% 移至雪道左右兩側邊緣。"
+          },
+          {
+            "code": "L0-V3",
+            "item": "雪板倒扣防流放反射動作",
+            "criterion": "脫下雪板後 2 秒內自動將雪板翻面「倒扣（Binding 朝下壓入雪地）」，絕不讓板底朝下平放。"
+          },
+          {
+            "code": "L0-V4",
+            "item": "日本雪場餐廳與板架禮儀",
+            "criterion": "進餐廳前刷淨靴底積雪、雪板置於戶外板架、不以物品預佔座位、餐後將餐具分類歸還至返却口。"
+          },
+          {
+            "code": "L0-V5",
+            "item": "洋蔥式穿戴、四大護具與雪靴正穿",
+            "criterion": "安全帽、防摔褲、護膝、護腕穿戴完整，雪靴內僅穿 1 雙高筒雪襪且雪褲防雪裙套於雪靴外殼。"
+          },
+          {
+            "code": "L0-V6",
+            "item": "上纜車前四項安全自檢",
+            "criterion": "進入纜車排隊區前完成：前腳綁緊、後腳解開、後固定器 Highback 往前折平、防滑墊清雪。"
+          }
+        ],
+        "snow_track_check": "檢查你在雪道邊緣休息後留下的臀印：必須緊貼雪道左右兩側邊界網 1.5 公尺內，雪道中央與坡頂下方 0 停留痕跡。",
+        "video_self_check": "請同伴在出發前拍一張全身照檢查：(1) 安全帽扣帶已扣緊且護目鏡無縫貼合額頭；(2) 脫板拍照時地上的雪板為「固定器朝下倒扣」狀態。"
+      }
+    },
+    {
       "id": "L1",
       "code": "STAGE L1",
-      "name": "初雪適應、安全受身與平地單腳控板（深度擴充版）",
-      "en_name": "First Contact, Athletic Stance, Safe Ukemi & One-Foot Mobility",
+      "name": "初雪適應、安全受身、省力起身與「上下纜車零摔倒特訓」",
+      "en_name": "First Contact, Safe Ukemi, Easy Stand-Up Hacks, One-Foot Control & Chairlift Loading/Unloading SOP",
       "badge_color": "emerald",
       "slope_target": "平地練習區 ～ 5°–8° 綠線緩坡底部",
       "recommended_Hours": "第 1–4 小時 (Day 1 上午)",
@@ -1077,37 +1116,37 @@
         "林敬軒博士 (生物力學)",
         "Wolfgang Bauer (器材調校)"
       ],
-      "coach_summary": "L1 是決定新手會「愛上滑雪」還是「第一天手腕骨折退坑」的關鍵分水嶺。本階段全面擴充 6 大核心基本功、2 幅生物力學圖解與 4 部高畫質教學影片：上纜車前必須在緩坡完成『器材鎖定、安全受身、三關節基礎站姿、單腳推進 (Skating)、單腳爬坡與雙向 J-Turn 單刃煞車』六大檢定。",
+      "coach_summary": "L1 是決定初學者會「愛上滑雪」還是「下纜車摔到懷疑人生」的關鍵分水嶺！針對初學者最恐懼的『爬不起來體力耗盡』與『上下纜車摔倒』，本階段特別強化：安全受身防骨折、省力起身兩大神技（跪姿翻轉＆抓前刃滾起）、單腳推進與 J-Turn 煞車，以及最完整的【上下纜車零摔倒 8 步分解 SOP（折平 Highback ➔ 後腳托板尾護膝 ➔ 後腳跟頂住後固定器 ➔ 雙眼看前方 10m 筆直滑出）】。",
       "image_key": "stance",
       "image_caption": "圖 L1-A｜標準基本運動站姿 (Athletic Basic Stance)：踝、膝、髖三關節等比微彎，脊柱自然直立，雙手自然張開維持平衡，視線看向滑行前方。",
       "svg_type": "stance_biomechanics",
       "svg_caption": "圖 L1-B｜L1 生物力學軸線與足底壓力分布解剖圖（踝膝髖三關節對齊 vs 常見折腰錯誤對比）",
-      "svg_type_2": "l1_jturn_skating",
-      "svg_caption_2": "圖 L1-C｜單腳推進 (Skating) 前後腳 60:40 配重與緩坡 J-Turn 迴山煞車幾何軌跡圖",
+      "svg_type_2": "l1_chairlift_mastery_sop",
+      "svg_caption_2": "圖 L1-C｜初學者上下纜車零摔倒 8 步分解 SOP 圖解（折平高背、後腳托板護膝、後腳頂固定器、直滑出站不急轉）",
       "skills": [
         {
-          "name": "1. 器材穿戴微調與腳跟完全鎖定 (Boot Fitting, Heel Lock & Highback Setup)",
-          "steps": "只穿一雙專業羊毛長雪襪（嚴禁穿兩雙襪子或把發熱褲塞進雪靴內，否則小腿必壓迫淤血）。穿靴時腳跟大力向後敲地 3 下確認『Heel Lock（腳跟零浮起）』，小腿脛骨緊貼靴舌無空隙；固定器 Highback（高背）預調前傾角 +1 格，讓小腿自然呈現 15° 微彎運動角度。"
+          "name": "1. 器材穿戴鎖定、慣用腳判定與平地板感適應 (Boot Lock, Stance Test & Flat-Ground Feel)",
+          "steps": "①【慣用腳判定】請同伴從背後輕推你一步，先邁出去支撐的那隻腳即為前腳（左腳在前為 Regular，右腳在前為 Goofy）；②【雪靴後跟死鎖】穿靴時腳跟用力往地上頓兩下頂死靴底，屈膝壓住靴舌同時鎖緊 BOA，確保墊腳尖時腳跟零浮起（Heel Lift = 0）；③【平地單腳與雙腳板感】在平地綁上雙腳，練習微屈膝左右搖晃重心（前腳 ➔ 中央 ➔ 後腳）與輕微跳躍，建立雪板與雙腳合而為一的本體感覺。"
         },
         {
-          "name": "2. 前後向安全受身跌倒反射訓練 (Safe Falling Ukemi — Front & Back)",
-          "steps": "【向後跌倒（Heel-side 失衡）】下巴立刻收緊貼胸（保護後腦勺）、雙手握拳交叉抱胸或拍擊大腿外側、屈膝降低高度讓臀部肉厚處先著地並順勢以圓背滾動卸力，『絕對禁止伸手向後撐地』！【向前跌倒（Toe-side 失衡）】雙手握拳曲肘，以雙小臂與雙膝同時著地滑行卸力，第一時間抬起小腿讓板頭離地避免雪板反插扭傷。"
+          "name": "2. 零受傷安全受身術 (Safe Ukemi) 與「初學者省力起身兩大秘訣 (Easy Stand-Up Hacks)」",
+          "steps": "①【安全受身鐵律：嚴禁手掌撐地！】往後（Heel-side）摔倒時：立刻收下巴看肚臍、雙手交叉抱胸或握拳、屈膝讓「臀部肉墊 ➔ 背部」依序滾動卸力；往前（Toe-side）摔倒時：握拳將前臂交叉於胸前，用「護膝跪地 ➔ 前臂滑行」卸力；②【省力起身秘訣 A：翻轉成跪姿起身（最省力，推薦 90% 新手！）】坐在雪地上硬撐起來會瞬間抽乾大腿與手臂體力！正確做法：先在地上把身體翻轉過來變成「雙膝跪在雪地上（Toe-side 跪姿）」，雙手撐地、腳尖刃卡進雪裡，輕鬆一站就起來；③【省力起身秘訣 B：Heel-side 拉板頭／前刃滾量起身】若必須面朝下坡起身，先將雙腳跟盡量拉近屁股下方，一手抓住雪板前刃中央（將板尾往屁股下拉近），另一手在身後輕推，利用身體往前滾動的動能把重心直接推到雪板正上方站起！"
         },
         {
-          "name": "3. 基礎運動站姿與三關節彈簧校準 (Neutral Athletic Stance & Triple Flexion)",
-          "steps": "雙腳站寬略寬於肩（約等於地面至膝蓋髕骨中點高度，約身高 × 0.31），踝關節背屈 15°、膝關節微彎 20°–25° 且膝蓋對準腳尖方向（微外展打開骨盆，嚴禁內八字扣膝）、髖關節位於雪板中心線正上方，上半身自然直立不折腰，雙肩與雪板長軸平行，頭部轉向滑行前方。"
+          "name": "3. 基本運動站姿 (Athletic Stance) 與三關節等比對齊",
+          "steps": "雙腳與肩同寬略寬 3–5cm，踝、膝、髖三關節等比微彎約 20°–25°（想像小腿脛骨輕輕壓住靴舌上的一顆生雞蛋）；骨盆保持中立不撅臀，雙肩自然放鬆與雪板長軸平行，雙手像騎寬把越野單車般微張在身體兩側，頭部轉向板頭方向、視線水平看向前方 8–10 公尺。"
         },
         {
-          "name": "4. 平地單腳八字扭轉與重心前後橫移 (One-Foot Board Flex & Weight Shift)",
-          "steps": "僅綁前腳站在平地上，練習：① 用前腳腳尖下壓、腳跟上提感受雪板前段鋼邊扭轉；② 雙腳踩板（後腳置於防滑墊），練習將重心從後腳（0/100）平滑移至雙腳中央（50/50）再移至前腳外側板頭（80/20），建立足底三點（大拇趾球、小拇趾球、腳跟）壓力地圖。"
+          "name": "4. 單腳推進滑行 (One-Foot Skating) 與單腳梯形爬坡 (Sidestepping)",
+          "steps": "這是從雪具大廳走到纜車站、以及下纜車後滑離出口的核心生存技！①【單腳推進 Skating】前腳綁進固定器，重心 60%–65% 壓在前腳膝蓋上；後腳在腳尖側（Toe-side）或腳跟側（Heel-side）像滑滑板一樣小步輕推雪面，推完一步後立刻將後腳放回兩固定器中間的「防滑墊 (Stomp Pad)」上滑行；②【單腳梯形爬坡】在緩坡將前腳鋼邊（腳尖刃或腳跟刃）橫向切入雪面，一階一階穩定走上小緩坡。"
         },
         {
-          "name": "5. 單腳蹬冰滑行與上下纜車實戰預演 (Skating & Chairlift Unloading Drill)",
-          "steps": "前腳入板承重 65%，後腳在 Toe Edge 前方（或 Heel Edge 後方）以小碎步向後蹬雪推進；滑動後迅速將後腳貼緊後固定器內側防滑墊 (Stomp Pad)，雙手平舉、雙眼直視前方 8 公尺目標點完成單腳直滑降。模擬下纜車時：起身瞬間後腳直接踩上防滑墊，在滑出斜坡道完全直線滑至平地後再轉向減速。"
+          "name": "5. 緩坡單腳直滑降與雙向 J-Turn 迴山煞車（搭纜車前模擬考）",
+          "steps": "在搭上第一趟纜車前，必須先在緩坡底部練熟這個動作（因為它就是下纜車的完全縮小版）！① 前腳綁定、後腳踩在防滑墊上且「後腳跟緊緊頂住後固定器底座內側」；② 沿著 5° 緩坡直滑降 5 公尺（重心 60% 壓前腳、雙手平舉、眼睛看前方）；③ 輕輕將前膝往腳尖側（Toe-side）或腳跟側（Heel-side）微壓，引導雪板畫出一個『J 字形』轉回山坡上方，利用上坡重力自然減速完全停穩。"
         },
         {
-          "name": "6. 單腳階梯爬坡與雙向 J-Turn 迴山煞車 (Side-Stepping & Heel/Toe J-Turns)",
-          "steps": "將前腳立起鋼邊 35° 深切入雪面，搭配後腳一步步穩健爬上 5°–8° 緩坡；由單腳直滑降出發，將視線與前膝微向山坡上方引導，逐漸壓下腳跟刃（Heel J-Turn）或腳尖刃（Toe J-Turn），讓雪板順著側切弧度畫出一個『J字形』轉向山坡上方並自然減速完全停穩。"
+          "name": "6. 【初學者專項加強】上下纜車零摔倒 8 步分解 SOP (Chairlift Loading & Unloading 8-Step SOP)",
+          "steps": "把上下纜車拆成 8 個機械化步驟，照做就能 100% 安全過關：\n🔹 **【上纜車 4 步 SOP (Loading)】**：\n  - **Step 1（折平高背）**：排隊前確認前腳綁緊、後腳解開，將**後腳固定器高背板 (Highback) 往前折平**。\n  - **Step 2（滑至乘車線）**：等前一張椅子通過後，單腳推進滑到 **Load Here（紅線）** 站定，板頭朝正前方，靠外側的手向後伸準備扶椅桿。\n  - **Step 3（看椅坐下）**：轉頭看後方滑來的纜車椅，當椅面碰到小腿肚瞬間，像坐沙發一樣平穩坐下（嚴禁往上跳！）。\n  - **Step 4（後腳托板護膝）**：坐穩喊「Bar Down」拉下安全護欄後，**把沒綁的後腳腳尖穿到雪板板尾下方托住雪板重量**（或放在腳踏桿上），絕不讓沉重的雪板懸空拉扯前腳膝蓋韌帶！\n🔸 **【下纜車 4 步 SOP (Unloading — 破除 90% 新手摔倒魔咒)】**：\n  - **Step 5（提早轉正雪板）**：到站前 15 公尺舉起護欄，在椅子上先把前腳雪板轉正朝向 **12 點鐘正前方**（板底完全放平）。\n  - **Step 6（後腳頂死後固定器）**：雪板接觸地面瞬間，後腳立刻踩在防滑墊上，且**後腳跟死死頂住後固定器底座前緣**（讓後腳擁有硬支撐）。\n  - **Step 7（重心壓前腳＋看遠方 10m）**：當椅背推你屁股時順勢站起，**雙手向前平伸（千萬別往後推椅子！）、60% 重量壓在前腳膝蓋上、雙眼死死盯著正前方 10 公尺遠處**（絕對不准低頭看腳下！）。\n  - **Step 8（前 5 公尺平板直滑出站）**：**剛站起來的前 5 公尺絕對不要急著轉彎或立刃煞車！** 維持 100% 平板筆直滑出卸客斜坡，等滑到下方平緩區自然減速停下後，再單腳滑到旁邊綁板（嚴禁停在纜車出口正前方擋路）。"
         }
       ],
       "awareness": {
@@ -1135,36 +1174,36 @@
       },
       "videos": [
         {
-          "title": "LEARN HOW TO SNOWBOARD IN 15 MINUTES (Complete Walk-Through)",
-          "channel": "Malcolm Moore",
-          "views": "540K+ views",
-          "video_id": "MOZWm1BFUVg",
-          "url": "https://www.youtube.com/watch?v=MOZWm1BFUVg",
-          "focus": "00:00–04:30 完整示範裝備設定、基本運動站姿、單腳滑行 (Skating) 與 J-Turn 煞車。"
-        },
-        {
-          "title": "10 Beginner Snowboard Tips - First Day",
+          "title": "How To Survive the Chairlift - Beginner Snowboarding",
           "channel": "SnowboardProCamp",
-          "views": "2.07M+ views",
-          "video_id": "3GHU3DN1v4Q",
-          "url": "https://www.youtube.com/watch?v=3GHU3DN1v4Q",
-          "focus": "第一天上雪必看的 10 個防摔細節、穿板技巧與如何安全上下纜車。"
+          "views": "826K+ views",
+          "video_id": "wl7sIvMgrqg",
+          "url": "https://www.youtube.com/watch?v=wl7sIvMgrqg",
+          "focus": "初學者上下纜車必看聖經：從排隊、坐下、空中托板到下纜車平板直滑出站的完整實拍分解。"
         },
         {
-          "title": "[Carving for Beginners] Basic Snowboarding Posture, Neutral Position",
-          "channel": "スノボー先生 (Ryu Hyodo)",
-          "views": "85K+ views",
-          "video_id": "f6DiEu-Khu8",
-          "url": "https://www.youtube.com/watch?v=f6DiEu-Khu8",
-          "focus": "日本頂尖教練詳解單板『中性基本站姿 (Neutral Position)』，為未來進階刻滑與平花打下完美骨架。"
+          "title": "5 Tips for Riding the Chairlift - Beginner Snowboarding",
+          "channel": "SnowboardProCamp",
+          "views": "74K+ views",
+          "video_id": "a9e2uCQHbjw",
+          "url": "https://www.youtube.com/watch?v=a9e2uCQHbjw",
+          "focus": "上下纜車 5 個不摔倒關鍵秘訣：後腳跟頂住後固定器底座、視線看遠方與出站減速技巧。"
         },
         {
-          "title": "🟢 beginner 👉🏽 Intermediate 🔵 turns on a snowboard",
-          "channel": "SnowboardTrainers",
-          "views": "1.54M+ views",
-          "video_id": "KsqJisCXq34",
-          "url": "https://www.youtube.com/watch?v=KsqJisCXq34",
-          "focus": "超直覺短片對比：從第一天新手站姿到流暢進階滑行的關鍵動作差異。"
+          "title": "Use this beginner snowboard hack to stand up easier",
+          "channel": "SnowboardProCamp",
+          "views": "514K+ views",
+          "video_id": "qHy-goO6vGQ",
+          "url": "https://www.youtube.com/watch?v=qHy-goO6vGQ",
+          "focus": "初學者省力起身神技：如何不再耗盡體力，利用跪姿翻轉與前刃支點輕鬆站起來。"
+        },
+        {
+          "title": "How To Snowboard For The First Time (Day 1 Complete Lesson)",
+          "channel": "Malcolm Moore",
+          "views": "890K+ views",
+          "video_id": "bfL15ef3BEs",
+          "url": "https://www.youtube.com/watch?v=bfL15ef3BEs",
+          "focus": "第一天上雪全流程：基本站姿、單腳推進 (Skating)、單腳爬坡與雙向 J-Turn 煞車。"
         }
       ],
       "verification_rubric": {
@@ -1336,7 +1375,17 @@
         ],
         "snow_track_check": "落葉飄留下的雪痕在左右兩端皆呈現微向上翹的『微笑曲線 (Smile Curve)』，代表是靠立刃弧度自然減速，而非死推到底。",
         "video_self_check": "正面/背面錄影檢查：Toe-side 時髖關節（臀部）沒有向後突出，肩膀至膝蓋呈現一直線微微傾倒向山坡。"
-      }
+      },
+      "embedded_sam_drills": [
+        {
+          "code": "SAM-D01",
+          "stage": "L2–L3 換刃打底",
+          "name": "原地與緩坡「頂胯 vs 坐胯」骨盆正位分離練習",
+          "problem_fixed": "專治：前刃 (Toe-side) 折腰撅屁股、低頭看板；後刃 (Heel-side) 硬勾腳尖、小腿脛前肌抽筋、躺後腳。",
+          "execution": "【前刃頂胯】雙手插在骨盆髂前上棘（皮帶扣兩側），入前刃時不是上半身往坡上撲，而是收緊臀部把皮帶扣往斜上方山坡『頂出去』，小腿自然壓緊靴舌，上半身保持微後仰反弓；【後刃坐胯】想像正後方有張高腳吧台椅，屈膝同時屁股『垂直往下坐靠在 Highback 上』，上身抱一顆大瑜珈球微朝板頭，絕不把屁股往板尾後方撅出去。",
+          "check_standard": "側面跟拍時，前刃無『ㄑ字折腰』，後刃無『躺椅式後仰』，重心投影線 100% 落在有效鋼邊上。"
+        }
+      ]
     },
     {
       "id": "L3",
@@ -1477,7 +1526,33 @@
         ],
         "snow_track_check": "回頭檢視雪痕：呈現連續圓弧狀的『S形寬帶』，且在每個彎的頂點過渡區沒有出現橫向暴衝刮雪的『直角Z字斷層』。",
         "video_self_check": "正後方跟拍檢查：(1) 換刃時前膝有明顯先動作；(2) 後手沒有甩過身體中線；(3) 過滾落線時臀部沒有往後腳方向塌陷。"
-      }
+      },
+      "embedded_sam_drills": [
+        {
+          "code": "SAM-D01",
+          "stage": "L2–L3 換刃打底",
+          "name": "原地與緩坡「頂胯 vs 坐胯」骨盆正位分離練習",
+          "problem_fixed": "專治：前刃 (Toe-side) 折腰撅屁股、低頭看板；後刃 (Heel-side) 硬勾腳尖、小腿脛前肌抽筋、躺後腳。",
+          "execution": "【前刃頂胯】雙手插在骨盆髂前上棘（皮帶扣兩側），入前刃時不是上半身往坡上撲，而是收緊臀部把皮帶扣往斜上方山坡『頂出去』，小腿自然壓緊靴舌，上半身保持微後仰反弓；【後刃坐胯】想像正後方有張高腳吧台椅，屈膝同時屁股『垂直往下坐靠在 Highback 上』，上身抱一顆大瑜珈球微朝板頭，絕不把屁股往板尾後方撅出去。",
+          "check_standard": "側面跟拍時，前刃無『ㄑ字折腰』，後刃無『躺椅式後仰』，重心投影線 100% 落在有效鋼邊上。"
+        },
+        {
+          "code": "SAM-D02",
+          "stage": "L3 初階轉進階",
+          "name": "滾落線前「提前換刃 (Early Edge Change)」慢動作倒重心練習",
+          "problem_fixed": "專治：轉彎永遠慢半拍、板子都橫過來了才急忙踢後腳搓雪、一過滾落線就加速失控。",
+          "execution": "在 10°–14° 寬綠/藍道，當舊彎完成橫切減速、車速降到最慢時（板頭指向 10 點鐘或 2 點鐘方向），『不要等板頭自己轉向山下』！此時先把舊刃放平，直接將整個身體像比薩斜塔一樣往山下新彎圓心『提前傾倒越過雪板』，讓新刃在板頭轉向滾落線（6點鐘）之前就已經咬進雪面，接著讓雪板自己沿著鋼邊弧度滑過滾落線。",
+          "check_standard": "回頭看雪痕：在滾落線上方（舊彎橫切尾端）就已經出現新刃的切線，滾落線正下方無橫向暴衝刮雪痕。"
+        },
+        {
+          "code": "SAM-D03",
+          "stage": "L3–L4 姿態糾錯",
+          "name": "「雙手限位三件套」抗反擰與抗內倒特訓（抱胸／拉褲縫／端托盤）",
+          "problem_fixed": "專治：轉彎靠甩後手踢後腳（反擰 Counter-rotation）、入彎內側肩膀下掉（內倒 Drop Shoulder）、雙手亂飛。",
+          "execution": "①【雙手交叉抱胸滑行】鎖死肩部甩動，強迫只用前膝腳踝扭轉與質心傾倒換刃；②【雙手抓雪褲外側褲縫滑行】大拇指勾住大腿外側褲縫，過彎時後手絕對不准離開褲縫甩向胸前；③【雙手端水平托盤（或橫握雪杖）】雙手在胸前平端一個隱形盛滿水的托盤，轉彎全程托盤必須與坡面保持平行，矯正內側肩膀向下栽倒的壞習慣。",
+          "check_standard": "連續完成 8 個 S-Turn 全程雙手不脫離限位點，且雪板無任何雨刷式甩尾。"
+        }
+      ]
     },
     {
       "id": "L4",
@@ -1618,7 +1693,41 @@
         ],
         "snow_track_check": "小迴轉雪痕呈現緊密、等距的波浪線，每個彎的刷雪區集中在滾落線正下方（早立刃、早減速），而非出彎後才急煞。",
         "video_self_check": "正面定點跟拍：(1) 肩膀連線始終與坡面平行且朝向鏡頭；(2) 雪板在身體左右兩側快速切換時，頭部高度幾乎保持水平。"
-      }
+      },
+      "embedded_sam_drills": [
+        {
+          "code": "SAM-D03",
+          "stage": "L3–L4 姿態糾錯",
+          "name": "「雙手限位三件套」抗反擰與抗內倒特訓（抱胸／拉褲縫／端托盤）",
+          "problem_fixed": "專治：轉彎靠甩後手踢後腳（反擰 Counter-rotation）、入彎內側肩膀下掉（內倒 Drop Shoulder）、雙手亂飛。",
+          "execution": "①【雙手交叉抱胸滑行】鎖死肩部甩動，強迫只用前膝腳踝扭轉與質心傾倒換刃；②【雙手抓雪褲外側褲縫滑行】大拇指勾住大腿外側褲縫，過彎時後手絕對不准離開褲縫甩向胸前；③【雙手端水平托盤（或橫握雪杖）】雙手在胸前平端一個隱形盛滿水的托盤，轉彎全程托盤必須與坡面保持平行，矯正內側肩膀向下栽倒的壞習慣。",
+          "check_standard": "連續完成 8 個 S-Turn 全程雙手不脫離限位點，且雪板無任何雨刷式甩尾。"
+        },
+        {
+          "code": "SAM-D04",
+          "stage": "L4 進階滑行核心",
+          "name": "「三段漸進加壓 (1-5-8 Pressure)」與「引伸 vs 下沉」雙節奏切換",
+          "problem_fixed": "專治：一換完刃就死命踩死（入彎過早失速卡頓），或全彎雙腿僵直像木頭人毫無律動感。",
+          "execution": "將每個彎拆成時鐘三階段配重：①【入彎期 12點➔10點】立刃不加壓（僅給 1–2 分力），讓板頭順暢吸入彎內；②【滾落線彎心 9點】屈膝下沉加壓至 5–6 分力抵抗離心力；③【出彎期 8點➔7點】踩實雙腳（後腳跟進至 8 分力）鎖死彎尾完成控速。練習在一趟雪道中，前 5 彎用『高換低（引伸換刃）』、後 5 彎無縫切換成『低換高（跨下抽板下沉換刃）』。",
+          "check_standard": "雪痕深淺呈現『入彎淺細 ➔ 彎心至出彎深邃 ➔ 換刃瞬間乾淨歸零』的完美水滴漸層。"
+        },
+        {
+          "code": "SAM-D05",
+          "stage": "L4–L5 搓雪轉走刃",
+          "name": "「J字單軌鐵路」➔「C字回山切線」➔「8字無限走刃」三階退搓練習",
+          "problem_fixed": "專治：滑了兩年還在『後腳刷刷刷推雪』，始終體會不到雪板鋼邊咬地走刃 (Carving) 的軌道感。",
+          "execution": "①【J字單軌】緩坡直滑降出發，雙腳 50/50 完全不轉腳，純靠身體往側方傾倒 35°，耐心等 2 秒讓雪板 Sidecut 自動畫出回山坡的 J 字單線；②【C字回山彎】從斜滑降提前換刃切入，全程鎖死後腳不准推出去，直到雪板轉回上坡自然減速停下，回頭檢視必須是 3 公分寬單線；③【連續 S 走刃】將兩個 C 字回山彎在減速尾段直接用 Cross-Under 抽板銜接。",
+          "check_standard": "雪面留下的不再是 30 公分寬的扇形刷痕，而是清晰能看見板底鋼邊切出的『單條火車鐵軌線』。"
+        },
+        {
+          "code": "SAM-D06",
+          "stage": "L4–L5 全山控速",
+          "name": "壓雪機接縫「單幅走廊鐘擺小迴轉 (1-Track Corridor Short Turns)」",
+          "problem_fixed": "專治：遇到窄雪道、陡坡或人多時不敢換刃，只能一路推坡下來；上下半身無法分離。",
+          "execution": "在雪道旁找到一條壓雪機壓出的單幅雪道紋路（寬約 3 公尺）作為強制邊界。上半身胸口與視線 100% 鎖定正山下（像照相機穩定器），下半身以『吸氣收膝抽板、吐氣向側下方蹬伸壓刃』的 1 秒 1 彎高頻率，在 3 公尺走廊內連續完成 20 個鐘擺小迴轉，絕不超出壓雪接縫線。",
+          "check_standard": "20 彎全程不壓出壓雪機單幅邊界，上半身無左右搖擺，換刃時間 < 0.35 秒。"
+        }
+      ]
     },
     {
       "id": "L5",
@@ -1792,6 +1901,118 @@
         ],
         "snow_track_check": "【法醫級雪痕檢驗】完美的刻滑雪痕像火車單軌一樣細膩深邃，在換刃點會看到舊刃線條末端與新刃線條起點呈現平行的『雙線交疊 30 公分』；Reverse Turn 則會在單一圓弧中看到細微的板頭支點轉換印記而無橫向刮雪。",
         "video_self_check": "慢動作檢視：(1) Low Position 時膝蓋彎曲 > 95° 且胸口朝向板頭（非折腰低頭）；(2) 板尾與板頭經過完全相同的雪面座標點。"
+      },
+      "embedded_sam_drills": [
+        {
+          "code": "SAM-D05",
+          "stage": "L4–L5 搓雪轉走刃",
+          "name": "「J字單軌鐵路」➔「C字回山切線」➔「8字無限走刃」三階退搓練習",
+          "problem_fixed": "專治：滑了兩年還在『後腳刷刷刷推雪』，始終體會不到雪板鋼邊咬地走刃 (Carving) 的軌道感。",
+          "execution": "①【J字單軌】緩坡直滑降出發，雙腳 50/50 完全不轉腳，純靠身體往側方傾倒 35°，耐心等 2 秒讓雪板 Sidecut 自動畫出回山坡的 J 字單線；②【C字回山彎】從斜滑降提前換刃切入，全程鎖死後腳不准推出去，直到雪板轉回上坡自然減速停下，回頭檢視必須是 3 公分寬單線；③【連續 S 走刃】將兩個 C 字回山彎在減速尾段直接用 Cross-Under 抽板銜接。",
+          "check_standard": "雪面留下的不再是 30 公分寬的扇形刷痕，而是清晰能看見板底鋼邊切出的『單條火車鐵軌線』。"
+        },
+        {
+          "code": "SAM-D06",
+          "stage": "L4–L5 全山控速",
+          "name": "壓雪機接縫「單幅走廊鐘擺小迴轉 (1-Track Corridor Short Turns)」",
+          "problem_fixed": "專治：遇到窄雪道、陡坡或人多時不敢換刃，只能一路推坡下來；上下半身無法分離。",
+          "execution": "在雪道旁找到一條壓雪機壓出的單幅雪道紋路（寬約 3 公尺）作為強制邊界。上半身胸口與視線 100% 鎖定正山下（像照相機穩定器），下半身以『吸氣收膝抽板、吐氣向側下方蹬伸壓刃』的 1 秒 1 彎高頻率，在 3 公尺走廊內連續完成 20 個鐘擺小迴轉，絕不超出壓雪接縫線。",
+          "check_standard": "20 彎全程不壓出壓雪機單幅邊界，上半身無左右搖擺，換刃時間 < 0.35 秒。"
+        }
+      ],
+      "embedded_carving_mastery": {
+        "core_principles": [
+          {
+            "title": "1. 破除最大誤區：「真低姿 (True Low Position)」vs「假低姿 (折腰摸雪 Fake Crouch)」",
+            "detail": "90% 滑手為了拍出貼地帥照，膝蓋只彎 20° 卻把腰折成 90° 伸手摸雪——這會導致臀部向後突出雪板外，造成『鋼邊失壓打滑 (Wash-out)』與嚴重腰椎負擔。真正的 Low Position 是【踝關節背屈 30°–35° + 膝關節深屈 95°–115° + 髖關節折疊】，此時大腿幾乎平行於雪面，但胸椎與頭部依然保持挺立，讓身體質心 (CoM) 緊緊貼在雪板鋼邊正上方偏彎內！"
+          },
+          {
+            "title": "2. Heel-Side Low Position（後刃貼地低姿）三大解剖關鍵：收後膝、順轉胸、抓前靴",
+            "detail": "後刃之所以難蹲低，是因為外八站姿下骨盆被鎖死，直接下蹲屁股一定往後掉。破解三步曲：①【後膝內收 (Drop Rear Knee In)】將後腳膝蓋主動往彎內（前腳膝蓋方向）靠攏，釋放髖關節內旋空間；②【順轉開放胸口 (Forward Chest Rotation)】將骨盆與胸口微轉向板頭方向（約 30°–45°），眼睛越過前肩看彎心出口；③【後手抓前靴外沿練習】蹲低時用後手去摸前腳固定器外側（或雙手抱前膝），瞬間完成完美的膝髖折曲 (Angulation)，屁股離雪面僅 10 公分卻穩如泰山！"
+          },
+          {
+            "title": "3. Toe-Side Low Position（前刃貼地低姿）三大解剖關鍵：跪後膝、開前膝、骨盆內投",
+            "detail": "前刃低姿絕不是『趴在雪板上睡覺』！正確結構：①【前膝外展、後膝跪板】前腳膝蓋往板頭彎內方向推開，後腳膝蓋主動往下跪向兩固定器中間的雪板頂面；②【骨盆內投 + 肩膀水平反折】大膽將彎內側髖部（骨盆）貼向雪面，但上半身透過側腹核心微向彎外反折（Angulation），使雙肩與地平線保持平行；③【前手輕撫雪面不撐重】前手肘或手掌可輕觸雪面感知距離，但 95% 重量必須踩在雙腳前刃鋼邊上。"
+          },
+          {
+            "title": "4. Low Position 動態進出時機：『彎中極低鎖刃 ➔ 出彎抽腿換刃 (Cross-Under)』",
+            "detail": "低姿勢刻滑若在換刃時大動作站高，在高速下會產生劇烈重心晃動。高階做法是【全程低姿保持 (Constant Low-Stance Carve)】或【Push-Pull 推拉刻滑】：換刃瞬間保持低頭頂高度，純靠雙膝與髖部將雪板從身體一側快速『抽過跨下 (Cross-Under)』推向另一側，實現行雲流水的貼地飛行。"
+          }
+        ],
+        "tricks_catalog": [
+          {
+            "id": "CV-01",
+            "name": "Low Position Basic Carve（極限低姿抱膝／摸靴走刃）",
+            "jp_name": "低い姿勢のベーシックカービング",
+            "difficulty": "★★★☆☆ (L5 必修)",
+            "stance_rec": "+21°/+6° 或 +15°/-9°",
+            "mechanics": "入彎前提前進入三關節深蹲（大腿平行雪面），Toe-side 雙手背後或抱膝、Heel-side 後手觸碰前腳靴外沿，全程保持恆定低重心滑出 3 公分寬鉛筆線。",
+            "key_tip": "想像頭頂上方 1.2 公尺有一根限高橫桿，無論在過彎或換刃時安全帽都不能撞到橫桿！"
+          },
+          {
+            "id": "CV-02",
+            "name": "Euro-Carve / Extreme Laid-Out Carve（歐式極限全身貼地刻滑）",
+            "jp_name": "ユーロカーブ / エクストリームカービング",
+            "difficulty": "★★★★☆ (L5 進階)",
+            "stance_rec": "+24°/+9° 或 +27°/+12° (配寬板)",
+            "mechanics": "採用 Swoard 經典『Push-Pull 推拉技術』：入彎換刃時處於極低蹲姿；當進入滾落線立刃達 65°+ 時，主動將雙腿向彎外雪板『推伸 (Push)』，讓身體完全展開平行貼於雪面（Toe-side 雙前臂撫雪、Heel-side 背部與臀部掠過雪面）；出彎瞬間快速將雙腿『拉回胸口 (Pull)』收腿換入下一彎。",
+            "key_tip": "決戰點在於『必須先立起 65° 高刃並獲得足夠離心力後才能推伸身體』，否則還沒立刃就撲倒只會直接滑出雪道！"
+          },
+          {
+            "id": "CV-03",
+            "name": "Rama-Style Tail-Load Rebound Carve（ラマ流・板尾蓄力彈射刻滑）",
+            "jp_name": "ラマ先生流・テール乗せリバウンドターン",
+            "difficulty": "★★★★☆ (L5 進階)",
+            "stance_rec": "+24°/+9° 或 +27°/+12°",
+            "mechanics": "入彎前段以 55/45 壓住板頭有效刃咬入雪槽；過滾落線進入彎心至出彎段時，雙膝深蹲並將髖部沿著雪板長軸『向板尾方向後移 (Front-to-Back Weight Shift)』，把全身重量與離心力灌注在後腳外側板尾最後 20 公分，將板尾壓彎如滿弓；換刃瞬間釋放板尾回彈力，像彈弓一樣彈入新彎。",
+            "key_tip": "後移重心時『胸口依然要壓低朝向前方』，是下半身髖部往板尾推，絕不是上半身往後仰！"
+          },
+          {
+            "id": "CV-04",
+            "name": "Dolphin Turn / Porpoise Carve（海豚跳刻滑）",
+            "jp_name": "ドルフィンターン（ラントリ入門）",
+            "difficulty": "★★★★☆ (L5×L6 融合)",
+            "stance_rec": "+18°/-6° 或 +24°/+6°",
+            "mechanics": "將 Rama-Style 板尾蓄力推向極致：在刻滑出彎（橫切微上坡階段）重壓板尾的同時，加入一個輕巧的『單刃 Ollie』讓板頭躍出雪面 20–30 公分；趁板頭在空中時，身體質心越過雪板完成空中換刃，落地瞬間由『板頭新刃率先切入雪面』、板尾隨後跟進，宛如海豚躍出海面再潛入水中！",
+            "key_tip": "起跳時千萬不要把舊刃放平！必須『維持在舊鋼邊走刃的狀態下直接從板尾彈起』，落地也直接落在下一條新鋼邊上。"
+          },
+          {
+            "id": "CV-05",
+            "name": "Reverse Turn / Reverse Carve（逆向反腳切入刻滑）",
+            "jp_name": "リバースターン（ノーズピボット・スイッチカーブ）",
+            "difficulty": "★★★★★ (L5×L6 高階神技)",
+            "stance_rec": "+15°/-9° 或 +18°/-6°",
+            "mechanics": "在正腳 Toe-side 刻滑入彎後，將重心壓向前腳 Nose Press 支點、輕輕提起後腳板尾，上半身向 Backside 逆向引導，讓雪板在彎中快速抹轉 180° 變成『Switch Heel-side（反腳後刃）』，但身體質心仍留在原彎圓心內，直接用反腳後刃繼續刻完同一個 C 形彎！亦可由 Heel-side 轉入 Switch Toe-side。",
+            "key_tip": "秘訣是『人走原本的圓弧線、只有腳下的板子自己轉 180 度』！轉板瞬間前腳支點要壓實，轉過來後立刻坐進反腳 Highback 鎖死後刃。"
+          },
+          {
+            "id": "CV-06",
+            "name": "Layback Slash Carve（後仰單手撫雪噴雪刻滑）",
+            "jp_name": "レイバック（スラッシュ＆カーブ）",
+            "difficulty": "★★★★☆ (L5 視覺系大招)",
+            "stance_rec": "全站姿皆可",
+            "mechanics": "在 Toe-side 或 Heel-side 刻滑進入彎心最高壓區時，極限放低重心並將重心移向後腳板尾，同時將後手（或內側手）伸向彎心後方雪面輕輕撐地作為第三支點，後腳順勢向外側猛力頂出板尾切開雪層，激起高達 2 公尺的扇形雪浪 (Snow Spray)，最後藉由核心與後腿收回重新站起續滑。",
+            "key_tip": "撐地的手只能承擔 15%–20% 輔助平衡力，真正的噴雪爆發力來自後腳踝膝對板尾鋼邊的推頂！"
+          },
+          {
+            "id": "CV-07",
+            "name": "Ryan Knapton Duck-Stance 360 Carve（雙向微外八貼地 360 旋轉走刃）",
+            "jp_name": "ダックスタンス・カービング360",
+            "difficulty": "★★★★★ (L5 大師級)",
+            "stance_rec": "+15°/-15° (Symmetrical Duck)",
+            "mechanics": "全程零推雪、純走刃的旋轉藝術：從正腳 Heel-side 深刻滑開始，在彎中將重心移至板頭切出 Carved Frontside 180 無縫接上 Switch Toe-side 刻滑，緊接著不中斷軌道再以板尾為軸切出 Carved Cab 180 回到正腳刻滑，在雪地上留下一條毫無斷裂的 360° 迴旋單軌。",
+            "key_tip": "每次過 90° 與 180° 時，必須精準切換『壓板頭有效刃 ➔ 壓板尾有效刃』，絕不能讓整張板底平貼地面打滑。"
+          },
+          {
+            "id": "CV-08",
+            "name": "Jump Carve / Air-to-Edge Switch（騰空飛躍換刃刻滑）",
+            "jp_name": "ジャンプカービング（エア・トゥ・エッジ）",
+            "difficulty": "★★★★★ (L5 超進階)",
+            "stance_rec": "+21°/+6° 或 +15°/-9°",
+            "mechanics": "在高速紅黑道刻滑出彎時，不單純收腿卸重，而是趁雙腿踩滿雪板 Camber 彎曲極限的瞬間，雙腳同時向上爆發起跳離地 30–50 公分；在空中將雪板翻轉至新刃角度並完成質心橫移，落地瞬間雙腳直接以 55° 立刃角像飛刀一樣插進雪面切出下一彎。",
+            "key_tip": "空中視線必須提前鎖定下方 10 公尺的切入點，落地瞬間雙膝與髖部必須像彈簧一樣同步深蹲吸收 3G 衝擊力。"
+          }
+        ]
       }
     },
     {
@@ -1967,7 +2188,161 @@
         ],
         "snow_track_check": "Drive Spin 與 Sone/Owen 在雪地上會留下一條極細的『板頭圓弧抹痕（無後刃橫刮斷層）』；Nollie 360/540/720 則會在起跳點留下一個清晰的『J字小弧線＋板頭點地凹痕』，隨後是完全空白的空中飛行區。",
         "video_self_check": "側面與後方 240fps 慢動作檢查：(1) 做 Press/Sone/Owen 時骨盆確實橫移至固定器外側而非折腰；(2) Nollie 540/720 離地瞬間雙手肘緊貼胸肋、雙膝上收。"
-      }
+      },
+      "embedded_ground_tricks": [
+        {
+          "tier": "TIER 1｜平花四大基本功 (Foundation Mechanics)",
+          "badge": "基礎必修 (L2–L5 同步打底)",
+          "tricks": [
+            {
+              "code": "GT-01",
+              "name": "Tail Press & Nose Press（板尾壓板／板頭壓板）",
+              "jp_name": "テールプレス / ノーズプレス",
+              "category": "Nori (乗り系 / 平衡壓板)",
+              "steps": "① 滑行中維持雙肩與雪板完全平行；②【Tail Press】不准仰頭彎腰！將骨盆（髖關節）沿雪板長軸水平橫移至後腳固定器外側上方，前腿主動向上提膝，上半身微向板頭傾倒做槓桿配重，壓住後固定器外側 10 公分的甜蜜點 (Sweet Spot)；③【Nose Press】將骨盆橫移至前腳固定器外側上方，後腿提膝，上半身拉回雙腳中央。",
+              "common_error": "常見錯誤：用『上半身後仰或前撲』去壓板，結果不是壓不起板頭，就是超出接觸點直接翻跟斗摔傷。"
+            },
+            {
+              "code": "GT-02",
+              "name": "Ollie（板尾槓桿彈跳）",
+              "jp_name": "オーリー",
+              "category": "Hajiki (弾き系 / 槓桿起跳)",
+              "steps": "① 雙膝微蹲蓄力；② 前腳將雪板往前推（或髖部快速後移）壓出瞬間 Tail Press，使板頭抬起 30°、板尾壓彎蓄滿彈性；③ 後腳踝膝向下猛力蹬伸點板起跳；④ 騰空瞬間『後膝主動往上收向胸口』將雪板拉回水平，雙腳同時屈膝落地。",
+              "common_error": "常見錯誤：兩隻腳同時往上死跳（這叫 Pop 不叫 Ollie），沒有利用板尾彎曲的彈簧槓桿，跳不高且容易落地失衡。"
+            },
+            {
+              "code": "GT-03",
+              "name": "Nollie（板頭槓桿彈跳 — 平花旋轉之母）",
+              "jp_name": "ノーリー（すり足 & 叩き）",
+              "category": "Hajiki (弾き系 / 板頭起跳)",
+              "steps": "平花 70% 高階旋轉（Nollie 360/540/720）的起跳核心！① 雙膝微蹲，重心移至雙腳中央偏後；② 起跳前將重心快速向前上方投射，或是把雪板往後擦拉（すり足），使前腳外側板頭甜蜜點瞬間壓彎；③ 前腳向下點地（叩き）引爆板頭回彈力；④ 空中收起前膝與後膝，水平雙腳落地。",
+              "common_error": "常見錯誤：起跳前重心早就死壓在板頭上（板頭已經被壓死沒有回彈空間），必須是『瞬間踩下、瞬間彈起』！"
+            },
+            {
+              "code": "GT-04",
+              "name": "Nose Roll & Tail Roll 180（板頭／板尾支點抹雪 180）",
+              "jp_name": "ノーズロール180 / テールロール180",
+              "category": "Mawashi (回し系 / 抹雪旋轉)",
+              "steps": "① 以【Toe-side Nose Roll BS 180】為例：先微立腳尖刃滑行；② 重心壓向前腳做 Toe-Nose Press 讓板尾離地（消除後刃卡雪風險）；③ 視線與後肩向背後（Backside）引導旋轉，以前腳板頭為圓心在雪面上平滑抹過 180°，切換成 Switch Heel Edge 滑出。",
+              "common_error": "常見錯誤：板尾還沒離開雪面就急著轉身，或是轉過 90° 時下游刃不慎觸雪導致『拍蒼蠅』重摔。"
+            }
+          ]
+        },
+        {
+          "tier": "TIER 2｜平花入門四大經典招式 (Entry-Level Signature Tricks)",
+          "badge": "入門人氣必學 (Drive Spin / Compass / Sone / Owen)",
+          "tricks": [
+            {
+              "code": "GT-05",
+              "name": "Compass 180 / 360（圓規旋轉）",
+              "jp_name": "コンパス（グラトリ全ての基礎）",
+              "category": "Nori × Mawashi (圓規支點系)",
+              "steps": "被日本教練譽為『不懂圓規就學不會平花』的核心基石！① 正腳微立腳尖刃（Toe Edge），上半身保持安靜不甩肩；② 前腳深深踩住板頭前刃（像圓規的針刺入雪面固定），同時將身體軸心完全移到前腳上方；③ 後腳像是『用腳底把足球往後上方踢起』般將板尾拉離雪面，繞著前腳圓心畫出 180° 或 360° 圓弧後輕柔落地。",
+              "common_error": "常見錯誤：上半身過度往旋轉方向甩動導致軸心偏離前腳，或者後腳沒有主動往上提拉導致板尾刮雪停住。"
+            },
+            {
+              "code": "GT-06",
+              "name": "Drive Spin 360（飄移陀螺旋轉 / F-Drive & B-Drive）",
+              "jp_name": "ドライブスピン（ゼロドライブ / 360）",
+              "category": "Mawashi (滑轉陀螺系)",
+              "steps": "完全不用跳也能在雪面上絲滑轉完 360° 的帥氣神技！以【Backside Drive Spin 360】為例：① 入彎微蹲做反向預轉蓄力（Wind-up）；② 進入平緩區時，將重心壓向前腳（約 70%）並立起約 10°–15° 的『順向腳尖刃（Toe-Nose）』使板尾變輕；③ 上半身向 Backside 釋放旋轉，當轉過 90° 橫板瞬間，『雙手迅速收攏貼近胸口、背部挺直鎖死垂直軸心』，利用板頭弧面像陀螺一樣直接滑轉完 360°！",
+              "common_error": "常見錯誤：轉到 180° 時害怕而彎腰看腳下，或不小心踩到下游腳跟刃（逆エッジ）瞬間向山下翻滾。"
+            },
+            {
+              "code": "GT-07",
+              "name": "Sone 180 / 360（索內 — 後刃板尾壓接前刃板頭正轉）",
+              "jp_name": "ソネ（ヒールテールプレス ➔ フロントノーズスピン）",
+              "category": "Nori × Hajiki (對角轉移系)",
+              "steps": "日系平花最具代表性的優雅入門招！分解四拍子：①【第1拍：Heel Tail Press 蓄力】微立後刃（腳跟刃），重心後移做出後刃 Tail Press，同時上半身往 Backside 微反轉蓄力（臉看板尾方向）；②【第2拍：對角線重心轉移】重心沿著『後腳跟 ➔ 前腳尖』對角線瞬間移向前腳板頭；③【第3拍：Frontside 釋放】前腳踩住板頭前刃（Toe-Nose）作為支點，上半身向 Frontside（胸口打開方向）旋轉並拉起板尾；④【第4拍：收腿落地】完成 180° 或 360° 平穩滑出。",
+              "common_error": "常見錯誤：第 1 拍的 Heel Tail Press 沒有做出反向蓄力，或是第 2 拍重心沒有確實移到前腳尖，變成原地雙腳亂跳。"
+            },
+            {
+              "code": "GT-08",
+              "name": "Owen（歐文 — 假索內正轉急停接反轉連招 / B-Owen & F-Owen）",
+              "jp_name": "オーウェン（グラトリ中級への登竜門）",
+              "category": "Combo Flow (雙支點反轉連招)",
+              "steps": "雪場回頭率最高的流暢系代表作！以最經典的【B-Owen（Backside Owen）】拆解四步曲：①【起手（同 Sone）】從後刃 Tail Press 轉移重心至前腳板頭，帶出 Frontside 180° 轉成反腳（Switch）；②【靈魂剎車（反擰鎖定）】在轉成 Switch 的瞬間，**上半身不跟著轉過去，而是將雙手與視線留住（形成強烈上下半身反擰蓄力）**，重心壓在新前腳（原本的後腳板尾）上；③【逆向反轉（Backside 180/360）】順著反擰彈力，以新板頭為支點向相反方向（Backside）絲滑抹轉或點跳出 180°/360°；④【定格收尾】接回正腳 Tail Press 帥氣滑出！",
+              "common_error": "常見錯誤：第一段正轉 180° 時上半身跟著轉到底，導致沒有任何反擰蓄力（タメ）可以啟動第二段的逆向旋轉！"
+            }
+          ]
+        },
+        {
+          "tier": "TIER 3｜平花進階實戰招式 (Intermediate-Advanced Tricks)",
+          "badge": "進階高轉速與連招 (Nollie 360 / Andy 360 / Tachibana / Lock)",
+          "tricks": [
+            {
+              "code": "GT-09",
+              "name": "Nollie Frontside 360 & Backside 360（板頭點跳 360）",
+              "jp_name": "ノーリーフロント360 / ノーリーバック360",
+              "category": "Hajiki (板頭彈跳旋轉)",
+              "steps": "①【Nollie FS 360】通常由腳尖刃（Toe Edge）微切入，上半身微向背側預轉蓄力 ➔ 釋放向 Frontside 旋轉的同時，前腳向下點壓板頭前刃觸發 Nollie 彈起 ➔ 空中視線越過前肩看落地點，雙腳同時以腳尖刃緩衝落地；②【Nollie BS 360】通常由腳跟刃（Heel Edge）或腳尖刃切入，前腳擦踢板頭向 Backside 點跳，空中轉頭越過後肩鎖定盲區落地點。",
+              "common_error": "常見錯誤：還沒點板前上半身就急著先轉走（先開き），導致前腳根本踩不到板頭甜蜜點，起跳高度為零。"
+            },
+            {
+              "code": "GT-10",
+              "name": "Andy 360（安迪 360 — 卷入 180 接反腳點跳 BS 360）",
+              "jp_name": "アンディ360（捲り系代表技）",
+              "category": "Mawashi × Hajiki (卷入彈跳系)",
+              "steps": "結合『抹雪卷入』與『高彈起跳』的人氣必殺技！①【前段卷入】正腳 Toe Edge 滑行，壓前腳板頭做出 Nose Roll Backside 180（或 Compass 180）快速卷入成反腳（Switch）；②【無縫點板】在轉成 Switch 腳跟刃（Switch Heel Edge）接觸雪面的 0.1 秒內，**完全不停頓**，直接利用旋轉離心力踩下新前腳（原本的板尾）觸發 Switch Nollie；③【空中爆發】向 Backside 方向彈跳飛出 360°，落地續滑。",
+              "common_error": "常見錯誤：前段 180° 轉完後停下來思考人生，把旋轉角動量全部浪費掉，變成死板的兩段式動作。"
+            },
+            {
+              "code": "GT-11",
+              "name": "Tachibana / 4-Block Combo（橘式四拍子連招）",
+              "jp_name": "タチバナ（オーウェン派生コンボ）",
+              "category": "Combo Flow (多支點連招)",
+              "steps": "Owen 的進階姐妹技！① 正腳 Toe-side 切入做 Frontside Nose Roll 180 轉為 Switch；② 重心留在原本的前腳（現在變成新後腳），做出 Switch Tail Press 滑行並反向蓄力；③ 重心快速移向新前腳（原板尾），利用反彈力向 Backside 點跳或抹轉出 360°；④ 落地接 Press 滑出。",
+              "common_error": "常見錯誤：板頭與板尾的 4 個支點（Toe-Nose, Heel-Nose, Toe-Tail, Heel-Tail）切換模糊，節奏黏在一起。"
+            },
+            {
+              "code": "GT-12",
+              "name": "Nollie Lock 360 / 540（板尾定格鎖死落地）",
+              "jp_name": "ノーリーロック（ピタ止め着地）",
+              "category": "Style & Control (定格控制系)",
+              "steps": "讓你的旋轉看起來像職業選手般乾淨利落的秘密武器！在執行 Nollie 360 或 540 即將落地的最後 45° 時，空中主動將後腿向下伸、前腿向上收，落地瞬間『單用後腳板尾（或前腳板頭）的鋼邊切入雪面做成 Press 姿態』，瞬間剎住所有旋轉慣性，定格 1 秒後再放下雪板滑走。",
+              "common_error": "常見錯誤：落地時雙腳平底著地，因為旋轉慣性太大而繼續在地上亂轉（Over-spin）停不下來。"
+            }
+          ]
+        },
+        {
+          "tier": "TIER 4｜平花超進階神技 (Super-Advanced Pro Tricks)",
+          "badge": "大神殿堂 (Andy 540 / Nollie 540 & 720 / Rodeo Andy / Chiffon)",
+          "tricks": [
+            {
+              "code": "GT-13",
+              "name": "Andy 540（安迪 540 — 卷入接一圈半狂暴旋轉）",
+              "jp_name": "アンディ540",
+              "category": "High-Spin (高轉速卷入彈跳)",
+              "steps": "在 Andy 360 的基礎上，將前段 Toe-side 卷入 180° 的半徑縮得更小、速度更快（像抽鞭子一樣把新板頭甩進滾落線下方），在新板頭後刃咬雪瞬間全力向下叩擊點板，起跳騰空後將雙手緊緊收在胸前、雙膝收至腹部，在空中完成 540°（1.5 圈）高速旋轉並以單腳 Press Lock 鎖死落地。",
+              "common_error": "常見錯誤：起跳時軸線過度向山下傾斜導致空中失衡橫摔，務必讓新板頭在身體正下方點板。"
+            },
+            {
+              "code": "GT-14",
+              "name": "Nollie 540 & Nollie 720（板頭點跳 540 / 720 — 彈跳系皇冠）",
+              "jp_name": "ノーリー540 / ノーリー720（高回転の極意）",
+              "category": "High-Spin (極限高轉速彈跳)",
+              "steps": "平花選手夢寐以求的終極里程碑！能轉出 720°（兩整圈）絕不是靠蠻力，而是靠【物理學角動量守恆三要素】：①【助滑立刃走弧線（アプローチ）】以 Toe Edge（或 Heel Edge）切出緊湊圓弧，利用雪道反作用力與上半身先行預轉蓄滿扭矩；②【0.08秒擦踢點板（擦り叩き）】前腳像火柴劃過火柴盒一樣，向斜後方快速擦踢板頭甜蜜點，將前進動能 100% 轉化為垂直高度與初始轉速；③【極限收軸（軸を細くする）】離地瞬間雙臂立刻抱緊貼胸（像花式滑冰選手收手）、雙膝往胸口提拉，將轉動慣量減半，轉速瞬間飆升 2 倍完成 720°！",
+              "common_error": "常見錯誤：想轉越多圈就越用力甩大手臂，結果雙手張開導致轉動慣量變大、空中轉速反而卡死在 450°！"
+            },
+            {
+              "code": "GT-15",
+              "name": "Rodeo Andy / Rode-An（羅迪歐安迪 — 三次元偏軸空翻）",
+              "jp_name": "ロデアン（ロデオアンディ / 3Dグラトリ）",
+              "category": "3D Invert (三次元偏軸翻轉)",
+              "steps": "平花賽場全場沸騰的 3D 大絕招！① 前段如同 Andy 一樣由 Toe-side 卷入 180° 至 Switch Heel-side 點板位置；② 點板起跳瞬間，上半身不是水平旋轉，而是『將後肩與頭部向斜後下方投射下潛（Off-Axis Drop）』，同時新前腳猛力向上踢起板頭；③ 身體在空中形成斜倒立後空翻合併旋轉（Rodeo 軸線），雙眼在翻轉半空中鎖定雪面，雙腳越過頭頂落地。",
+              "common_error": "常見錯誤：尚未在彈跳床與粉雪區練熟偏軸空翻空間感就直接在硬雪道嘗試，極易傷及頸椎與肩膀！務必循序漸進。"
+            },
+            {
+              "code": "GT-16",
+              "name": "Chiffon 360 / 540（雪紡旋 — 索內起手接反向高彈跳）",
+              "jp_name": "シフォン（ソネ ➔ 逆回転飛び系コンボ）",
+              "category": "Pro Combo (高階複合彈跳)",
+              "steps": "結合 Sone 的柔美與 Nollie 的爆發力：① 先以 Heel Tail Press 轉移至前腳 Toe-Nose 做出 Sone 180°；② 當轉至反腳瞬間，利用上半身反擰煞住正向旋轉，將重心瞬間壓在板頭（原板尾）前刃上；③ 向反方向爆發點跳出高空 360° 或 540°，視覺反差極大！",
+              "common_error": "常見錯誤：第一段 Sone 重心過度前傾，導致轉到反腳時無法踩穩點板支點。"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "L7",
@@ -2236,18 +2611,18 @@
     };
 
     let currentMainSection = 'stages';
-    let currentStageId = 'L1';
+    let currentStageId = 'L0';
     let stageDisplayMode = 'single';
     let checkedRubrics = {};
 
     try {
-      const saved = localStorage.getItem('sb_skill_rubrics_v2');
+      const saved = localStorage.getItem('sb_skill_rubrics_v3');
       if (saved) checkedRubrics = JSON.parse(saved);
     } catch (e) {}
 
     function saveRubrics() {
       try {
-        localStorage.setItem('sb_skill_rubrics_v2', JSON.stringify(checkedRubrics));
+        localStorage.setItem('sb_skill_rubrics_v3', JSON.stringify(checkedRubrics));
       } catch (e) {}
     }
 
@@ -2258,9 +2633,103 @@
       setTimeout(() => t.classList.add('hidden'), 3200);
     }
 
-    // 16 Custom Technical Biomechanical & Trajectory SVG Diagrams
     function getStageSvg(svgType) {
       const svgs = {
+        
+        l0_tickets_and_etiquette: `
+          <svg viewBox="0 0 600 260" class="w-full h-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
+            <!-- Left: Lift Ticket Types & 4-Hour Flex Pass -->
+            <rect x="8" y="8" width="284" height="244" rx="12" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="1.5"/>
+            <text x="20" y="30" fill="#38BDF8" font-size="12.5" font-weight="bold">🎟️ 雪票分類精算：4小時時間券 vs 點數券</text>
+            <rect x="22" y="45" width="256" height="44" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+            <text x="32" y="63" fill="#6EE7B7" font-size="11" font-weight="bold">★ 4小時時間券 (4-Hour Flex Pass) 最推！</text>
+            <text x="32" y="80" fill="#CBD5E1" font-size="10">首次刷過閘機起算連續 4h（如10:15➔14:15）睡飽滑滿</text>
+            <rect x="22" y="97" width="256" height="44" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+            <text x="32" y="115" fill="#FDE68A" font-size="11" font-weight="bold">★ 點數券/回數券 (Point Pass)：Day 1 新手首選</text>
+            <text x="32" y="132" fill="#CBD5E1" font-size="10">第一天多在緩坡練單腳與推坡，買2–3趟比一日券省50%</text>
+            <rect x="22" y="149" width="256" height="44" rx="8" fill="#0F172A" stroke="#94A3B8" stroke-width="1"/>
+            <text x="32" y="167" fill="#E2E8F0" font-size="11" font-weight="bold">★ IC卡感應鐵律（含 ¥500 押金可退還）</text>
+            <text x="32" y="184" fill="#FDA4AF" font-size="10">放左臂專用袋！嚴禁與手機/信用卡/暖暖包同袋</text>
+            <text x="22" y="236" fill="#38BDF8" font-size="10.5" font-weight="bold">💡 一般一日券僅至 16:30，不含 17:00 後夜滑 (Nighter)</text>
+
+            <!-- Right: Japanese Resort Etiquette -->
+            <rect x="304" y="8" width="288" height="244" rx="12" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1.5"/>
+            <text x="318" y="30" fill="#10B981" font-size="12.5" font-weight="bold">🇯🇵 日本雪場四大禮儀與雪板倒扣鐵律</text>
+            <!-- Board upside down diagram -->
+            <line x1="325" y1="88" x2="445" y2="88" stroke="#94A3B8" stroke-width="2"/>
+            <path d="M 335 78 Q 385 88 435 78" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round"/>
+            <rect x="355" y="80" width="12" height="10" fill="#F59E0B"/>
+            <rect x="400" y="80" width="12" height="10" fill="#F59E0B"/>
+            <text x="455" y="75" fill="#6EE7B7" font-size="10.5" font-weight="bold">✅ 脫板必「倒扣」</text>
+            <text x="455" y="90" fill="#CBD5E1" font-size="9.5">Binding朝下防變血滴子</text>
+            <text x="318" y="122" fill="#FDE68A" font-size="10.5" font-weight="bold">1. 進餐廳前：門口刷子＋氣槍清乾淨靴底積雪，板放板架</text>
+            <text x="318" y="150" fill="#FDA4AF" font-size="10.5" font-weight="bold">2. 嚴禁佔位 (場所取り禁止)：不可丟背包/手套預佔空桌</text>
+            <text x="318" y="178" fill="#BAE6FD" font-size="10.5" font-weight="bold">3. 自助返却口：餐後自行將托盤餐具分類歸還並擦桌</text>
+            <text x="318" y="206" fill="#E9D5FF" font-size="10.5" font-weight="bold">4. 纜車禮儀：人多主動共乘(相乗り)，拉護欄前喊 Bar Down</text>
+            <text x="318" y="236" fill="#94A3B8" font-size="10">進飯店乾燥室前擦乾板面水份；溫泉毛巾不入池</text>
+          </svg>`,
+        l0_slope_blindspots_and_gear: `
+          <svg viewBox="0 0 600 260" class="w-full h-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
+            <!-- Left: Slope Blind Rollover & Sitting Rules -->
+            <rect x="8" y="8" width="292" height="244" rx="12" fill="rgba(244,63,94,0.08)" stroke="#F43F5E" stroke-width="1.5"/>
+            <text x="20" y="30" fill="#FB7185" font-size="12.5" font-weight="bold">🚫 雪道致命禁區：嚴禁坐雪道中間與坡頂盲區</text>
+            <!-- Slope profile with blind rollover -->
+            <path d="M 25 65 L 135 80 Q 175 85 205 145 L 280 220" fill="none" stroke="#64748B" stroke-width="4"/>
+            <!-- Skier flying from top -->
+            <circle cx="95" cy="62" r="7" fill="#38BDF8"/>
+            <line x1="102" y1="62" x2="245" y2="115" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="115" y="55" fill="#BAE6FD" font-size="9.5">上方滑手視線死角線</text>
+            <!-- Forbidden sitting person under knoll -->
+            <circle cx="195" cy="118" r="8" fill="#F43F5E"/>
+            <text x="145" y="168" fill="#F43F5E" font-size="10.5" font-weight="bold">❌ 坡頂下方盲區 (Blind Rollover)</text>
+            <text x="145" y="184" fill="#FDA4AF" font-size="10">❌ 雪道正中間（最易遭高速追撞）</text>
+            <text x="20" y="218" fill="#10B981" font-size="10.5" font-weight="bold">✅ 正確停靠：雪道最左右兩側邊緣 1.5m 內且視野開闊處</text>
+            <text x="20" y="238" fill="#CBD5E1" font-size="10">★ FIS鐵律：前方(山下)滑手優先；起步前100%轉頭看上坡</text>
+
+            <!-- Right: Boot Fitting & 3-Layer Armor -->
+            <rect x="308" y="8" width="284" height="244" rx="12" fill="rgba(15,23,42,0.9)" stroke="#334155"/>
+            <text x="320" y="30" fill="#F59E0B" font-size="12.5" font-weight="bold">👢 雪靴防痛鐵律 & 新手保命四大護具</text>
+            <rect x="322" y="45" width="256" height="78" rx="10" fill="rgba(16,185,129,0.1)" stroke="#10B981"/>
+            <text x="332" y="65" fill="#6EE7B7" font-size="11" font-weight="bold">✅ 雪靴內只准有：「腳 ＋ 1雙高筒雪襪」</text>
+            <text x="332" y="84" fill="#E2E8F0" font-size="10">• 雪褲內層防雪裙 (Powder Skirt) 必須套在雪靴外殼！</text>
+            <text x="332" y="102" fill="#FDA4AF" font-size="10">• ❌ 嚴禁穿兩雙襪子或把厚褲管塞進靴內（小腿必瘀青）</text>
+            <rect x="322" y="132" width="256" height="106" rx="10" fill="#0F172A" stroke="#475569"/>
+            <text x="332" y="152" fill="#38BDF8" font-size="11" font-weight="bold">🛡️ 初學者必備四大護具 & 三層穿法：</text>
+            <text x="332" y="170" fill="#CBD5E1" font-size="10">1. 安全帽 (必戴) ＋ 2. 防摔褲 (護尾椎) ＋ 3. 護膝 ＋ 4. 護腕</text>
+            <text x="332" y="188" fill="#FDE68A" font-size="10">• 內層排汗衣（禁穿純棉T恤防失溫）＋中層刷毛＋外層防水雪衣</text>
+            <text x="332" y="206" fill="#6EE7B7" font-size="10">• 避開平坦連絡道 (Cat Track)，Day 1 鎖定 6°–10° 寬敞主綠線</text>
+            <text x="332" y="224" fill="#94A3B8" font-size="9.5">• 緊急求救：於傷者上方 5–10m 插立雪板警示並打 Patrol 電話</text>
+          </svg>`,
+        l1_chairlift_mastery_sop: `
+          <svg viewBox="0 0 600 260" class="w-full h-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
+            <!-- Left: Chairlift Loading 4 Steps -->
+            <rect x="8" y="8" width="284" height="244" rx="12" fill="rgba(56,189,248,0.1)" stroke="#38BDF8" stroke-width="1.5"/>
+            <text x="20" y="30" fill="#38BDF8" font-size="12.5" font-weight="bold">🚡 上纜車 4 步 SOP (Chairlift Loading)</text>
+            <text x="20" y="55" fill="#FDE68A" font-size="10.5" font-weight="bold">① 折平後腳 Highback：把後固定器高背往前折平防勾椅</text>
+            <text x="20" y="80" fill="#E2E8F0" font-size="10.5">② 單腳滑至 Load Here 線：板頭朝正前，外手向後扶椅桿</text>
+            <text x="20" y="105" fill="#E2E8F0" font-size="10.5">③ 看椅平穩坐下：椅面碰小腿肚瞬間坐下（嚴禁往上跳）</text>
+            <rect x="20" y="122" width="260" height="62" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+            <text x="30" y="142" fill="#6EE7B7" font-size="11" font-weight="bold">④ 空中護膝秘訣：後腳尖穿入板尾下方托住！</text>
+            <text x="30" y="160" fill="#CBD5E1" font-size="10">拉下護欄前喊「Bar Down」，用後腳托住雪板或放腳踏桿，</text>
+            <text x="30" y="175" fill="#CBD5E1" font-size="10">絕不讓沉重雪板懸空死扯前腳膝蓋十字韌帶！</text>
+            <text x="20" y="212" fill="#BAE6FD" font-size="10.5" font-weight="bold">💡 省力起身 Hack：翻成 Toe-side 雙膝跪姿一站即起！</text>
+            <text x="20" y="235" fill="#94A3B8" font-size="10">單腳 Skating 配重：前腳 60% 綁定 ＋ 後腳踩防滑墊 40%</text>
+
+            <!-- Right: Chairlift Unloading 4 Steps -->
+            <rect x="304" y="8" width="288" height="244" rx="12" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="1.5"/>
+            <text x="316" y="30" fill="#10B981" font-size="12.5" font-weight="bold">🛷 下纜車零摔倒 4 步 SOP (Unloading)</text>
+            <!-- Slope ramp diagram -->
+            <path d="M 320 95 L 400 95 L 515 145 L 575 145" fill="none" stroke="#10B981" stroke-width="4"/>
+            <circle cx="385" cy="80" r="8" fill="#F59E0B"/>
+            <path d="M 385 88 L 545 138" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="5,3"/>
+            <text x="410" y="82" fill="#BAE6FD" font-size="10" font-weight="bold">👁️ 雙眼死盯前方 10m（絕不看腳下！）</text>
+            <text x="316" y="170" fill="#FDE68A" font-size="10.5" font-weight="bold">⑤ 到站前 15m 舉護欄，在椅上先把雪板轉正朝 12 點鐘</text>
+            <text x="316" y="192" fill="#6EE7B7" font-size="10.5" font-weight="bold">⑥ 雪板觸地瞬間：後腳踩防滑墊，後腳跟死頂後固定器前緣</text>
+            <text x="316" y="214" fill="#E2E8F0" font-size="10.5" font-weight="bold">⑦ 順椅推力站起：重心 60% 壓前腳，雙手向前伸（禁推椅！）</text>
+            <text x="316" y="236" fill="#FB7185" font-size="10.5" font-weight="bold">⑧ 前 5m 維持 100% 平板直滑出站！自然減速後再滑開綁板</text>
+          </svg>`,
+
+        
         stance_biomechanics: `
           <svg viewBox="0 0 600 260" class="w-full h-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
             <rect x="8" y="8" width="280" height="244" rx="12" fill="rgba(16,185,129,0.12)" stroke="#10B981" stroke-width="1.5"/>
@@ -2553,46 +3022,9 @@
             <text x="325" y="185" fill="#10B981" font-size="11" font-weight="bold">③ 落地前預立新刃 + 雙腳同步深蹲緩衝鎖死</text>
             <text x="325" y="238" fill="#FDA4AF" font-size="11">⚠️ 陡坡鐵律：越陡越要壓前肩，後仰必失控滑落</text>
           </svg>`
+      
       };
       return svgs[svgType] || svgs.stance_biomechanics;
-    }
-
-    function switchMainSection(sec) {
-      currentMainSection = sec;
-      ['stages', 'sam', 'carving', 'gratori', 'coaches', 'passport'].forEach(id => {
-        const el = document.getElementById('section-' + id);
-        const nav = document.getElementById('nav-' + id);
-        if (el) {
-          if (id === sec) el.classList.remove('hidden');
-          else el.classList.add('hidden');
-        }
-        if (nav) {
-          if (id === sec) nav.classList.add('active');
-          else nav.classList.remove('active');
-        }
-      });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function setStageDisplayMode(mode) {
-      stageDisplayMode = mode;
-      const bSingle = document.getElementById('btn-mode-single');
-      const bAll = document.getElementById('btn-mode-all');
-      if (mode === 'single') {
-        bSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40';
-        bAll.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700';
-      } else {
-        bAll.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40';
-        bSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700';
-      }
-      renderStageTabs();
-      renderStages();
-    }
-
-    function selectStage(stageId) {
-      currentStageId = stageId;
-      stageDisplayMode = 'single';
-      setStageDisplayMode('single');
     }
 
     function toggleVideoEmbed(vidId, containerId) {
@@ -2631,7 +3063,7 @@
       renderStageTabs();
       renderStages();
       renderPassport();
-      showToast(state ? '✅ 已勾選全部 48 項檢定標準！' : '🔄 已重置所有檢定進度');
+      showToast(state ? '✅ 已勾選全部 54 項檢定標準！' : '🔄 已重置所有檢定進度');
     }
 
     function updateProgressUI() {
@@ -2649,11 +3081,12 @@
       document.getElementById('hero-progress-bar').style.width = `${pct}%`;
 
       let rank = '🌱 準備上雪 (Pre-Snow Rookie)';
-      if (done >= 45) rank = '👑 傳奇全山宗師 (All-Mountain Grandmaster L8)';
-      else if (done >= 36) rank = '🔥 平花大神與公園專家 (Gratori & Park Master L6–L7)';
-      else if (done >= 24) rank = '🔪 貼地刻滑與全山悍將 (Low-Carve & All-Mountain L4–L5)';
-      else if (done >= 12) rank = '❄️ 進階 S-Turn 制御者 (Linked Turn Rider L2–L3)';
-      else if (done >= 6) rank = '🏂 綠道安全滑手 (Green Slope Explorer L1)';
+      if (done >= 50) rank = '👑 傳奇全山宗師 (All-Mountain Grandmaster L8)';
+      else if (done >= 42) rank = '🔥 平花大神與公園專家 (Gratori & Park Master L6–L7)';
+      else if (done >= 30) rank = '🔪 貼地刻滑與全山悍將 (Low-Carve & All-Mountain L4–L5)';
+      else if (done >= 18) rank = '❄️ 進階 S-Turn 制御者 (Linked Turn Rider L2–L3)';
+      else if (done >= 12) rank = '🏂 綠道安全滑手 (Green Slope Explorer L1)';
+      else if (done >= 6) rank = '🎟️ 雪場禮儀合格生 (Resort Etiquette Certified L0)';
       document.getElementById('hero-rank-badge').textContent = `目前認證段位：${rank}`;
     }
 
@@ -2686,39 +3119,135 @@
         const svgHtml1 = getStageSvg(s.svg_type);
         const svgHtml2 = s.svg_type_2 ? getStageSvg(s.svg_type_2) : '';
         const doneCount = s.verification_rubric.items.filter(i => checkedRubrics[i.code]).length;
+        const stageNum = parseInt(s.id.slice(1));
 
-        let specialBanner = '';
-        if (s.id === 'L3' || s.id === 'L4') {
-          specialBanner = `
-            <div class="bg-emerald-500/10 border border-emerald-500/35 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div class="text-xs text-slate-200">
-                <strong class="text-emerald-300">🎯 小紅書「Sam單板」進階滑行特訓已整合至本階段！</strong> 點擊右側按鈕可開啟完整 6 大黃金練習矩陣（頂胯坐胯、滾落線前提前換刃、雙手限位三件套、1-5-8 三段加壓）。
+        // 1) Directly render embedded Sam Drills inside L2, L3, L4, L5
+        let embeddedSamHtml = '';
+        if (s.embedded_sam_drills && s.embedded_sam_drills.length > 0) {
+          embeddedSamHtml = `
+            <div class="bg-emerald-950/20 border border-emerald-500/40 rounded-2xl p-5 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-emerald-500/20 pb-3">
+                <div>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400">Sam Snowboard Progressive Drills · 併入 ${s.id}</span>
+                  <h3 class="text-base sm:text-lg font-extrabold text-white mt-0.5">🎯 ${s.id} 進階滑行專項特訓（參考小紅書「Sam單板」黃金練習處方）</h3>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold self-start">本階段必練 ${s.embedded_sam_drills.length} 組 Drills</span>
               </div>
-              <button onclick="switchMainSection('sam')" class="px-3 py-1.5 rounded-xl bg-emerald-500 text-slate-950 font-extrabold text-xs whitespace-nowrap self-start sm:self-center">
-                開啟 Sam單板 6大特訓專頁 ➔
-              </button>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                ${s.embedded_sam_drills.map(d => `
+                  <div class="bg-slate-900/95 border border-slate-800 rounded-xl p-4 space-y-2.5 flex flex-col justify-between">
+                    <div class="space-y-2">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-black">${d.code}</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-300 text-[11px] font-bold">${d.stage}</span>
+                      </div>
+                      <h4 class="text-sm sm:text-base font-extrabold text-white">${d.name}</h4>
+                      <div class="p-2.5 rounded-lg bg-rose-950/30 border border-rose-500/30 text-xs text-rose-200">
+                        🩺 <strong>${d.problem_fixed}</strong>
+                      </div>
+                      <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong class="text-sky-300">🏂 雪上執行步驟：</strong>${d.execution}
+                      </p>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-emerald-950/30 border border-emerald-500/30 text-xs text-emerald-200">
+                      ✅ <strong>驗收標準：</strong>${d.check_standard}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
             </div>
           `;
-        } else if (s.id === 'L5') {
-          specialBanner = `
-            <div class="bg-amber-500/10 border border-amber-500/35 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div class="text-xs text-slate-200">
-                <strong class="text-amber-300">🔪 Carving Low Position 低姿解剖與 8 大刻滑招式百科！</strong> 點擊右側按鈕可開啟獨立專章（含真假低姿對比、Euro-Carve、Rama流板尾彈射、海豚跳、Reverse Turn 逆向刻滑）。
+        }
+
+        // 2) Directly render embedded Carving Low Position & 8 Tricks inside L5
+        let embeddedCarvingHtml = '';
+        if (s.embedded_carving_mastery) {
+          const cm = s.embedded_carving_mastery;
+          embeddedCarvingHtml = `
+            <div class="bg-amber-950/20 border border-amber-500/40 rounded-2xl p-5 space-y-6">
+              <div class="border-b border-amber-500/20 pb-3">
+                <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400">Carving Low Position & 8 Signature Tricks · 直接併入 L5</span>
+                <h3 class="text-base sm:text-xl font-black text-white mt-0.5">🔪 L5 專項深掘：Low Position（低姿勢刻滑）解剖與 8 大進階刻滑招式百科</h3>
+                <p class="text-xs text-slate-300 mt-1">徹底破除「彎腰摸雪假低姿」，掌握踝32°+膝105°+胸朝板頭真低姿，以及 Euro-Carve、Rama流板尾彈射、海豚跳與 Reverse Turn 逆向刻滑！</p>
               </div>
-              <button onclick="switchMainSection('carving')" class="px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-extrabold text-xs whitespace-nowrap self-start sm:self-center">
-                開啟 Low Position & 8大刻滑招專頁 ➔
-              </button>
+
+              <!-- 4 Core Low Position Principles -->
+              <div class="space-y-2.5">
+                <h4 class="text-sm font-extrabold text-amber-300">📐 一、Low Position（低姿勢刻滑）四大核心生物力學原則</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  ${cm.core_principles.map(p => `
+                    <div class="bg-slate-900/95 border border-slate-800 rounded-xl p-4 space-y-1.5">
+                      <div class="text-xs sm:text-sm font-extrabold text-amber-300">${p.title}</div>
+                      <p class="text-xs text-slate-300 leading-relaxed">${p.detail}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- 8 Carving Tricks Grid -->
+              <div class="space-y-2.5">
+                <h4 class="text-sm font-extrabold text-amber-300">🔥 二、Carving 8 大進階與花式刻滑招式圖鑑 (CV-01 ～ CV-08)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  ${cm.tricks_catalog.map(t => `
+                    <div class="bg-slate-900/95 border border-slate-800 rounded-xl p-4 space-y-2.5 flex flex-col justify-between">
+                      <div class="space-y-1.5">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-black">${t.id} · ${t.difficulty}</span>
+                          <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-300 font-mono text-[11px]">推薦站姿：${t.stance_rec}</span>
+                        </div>
+                        <h5 class="text-sm sm:text-base font-extrabold text-white">${t.name}</h5>
+                        <div class="text-xs text-amber-400/90 font-semibold">🇯🇵 ${t.jp_name}</div>
+                        <p class="text-xs text-slate-300 leading-relaxed pt-1">${t.mechanics}</p>
+                      </div>
+                      <div class="p-2.5 rounded-lg bg-amber-950/30 border border-amber-500/30 text-xs text-amber-200">
+                        💡 <strong>破關秘訣：</strong>${t.key_tip}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
             </div>
           `;
-        } else if (s.id === 'L6') {
-          specialBanner = `
-            <div class="bg-purple-500/10 border border-purple-500/35 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div class="text-xs text-slate-200">
-                <strong class="text-purple-300">🌀 平花（グラトリ）四階 16 招完整圖鑑！</strong> 點擊右側按鈕可開啟「Tier 1 基本功 ➔ Tier 2 入門 (Compass / Drive Spin / Sone / Owen) ➔ Tier 3 進階 ➔ Tier 4 超進階 (Andy 540 / Nollie 720 / ロデアン)」百科。
+        }
+
+        // 3) Directly render embedded Ground Trick 4-Tier 16 Tricks inside L6
+        let embeddedGratoriHtml = '';
+        if (s.embedded_ground_tricks) {
+          embeddedGratoriHtml = `
+            <div class="bg-purple-950/20 border border-purple-500/40 rounded-2xl p-5 space-y-6">
+              <div class="border-b border-purple-500/20 pb-3">
+                <span class="text-[11px] font-bold uppercase tracking-widest text-purple-400">Ground Trick (グラトリ) 4-Tier 16-Trick Encyclopedia · 直接併入 L6</span>
+                <h3 class="text-base sm:text-xl font-black text-white mt-0.5">🌀 L6 專項深掘：平花四階 16 招完整百科（Press/Ollie/Nollie ➔ Drive Spin/Sone/Owen ➔ Nollie 720）</h3>
+                <p class="text-xs text-slate-300 mt-1">從四大基本功、入門必學四大招（Compass、Drive Spin、Sone、Owen）、進階 360/Andy，一路到超進階 Andy 540、Nollie 720 與 Rodeo Andy 全拆解！</p>
               </div>
-              <button onclick="switchMainSection('gratori')" class="px-3 py-1.5 rounded-xl bg-purple-500 text-white font-extrabold text-xs whitespace-nowrap self-start sm:self-center">
-                開啟平花 16 招全圖鑑專頁 ➔
-              </button>
+              <div class="space-y-6">
+                ${s.embedded_ground_tricks.map(tObj => `
+                  <div class="space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                      <h4 class="text-sm sm:text-base font-black text-purple-300">${tObj.tier}</h4>
+                      <span class="px-2.5 py-0.5 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-200 text-xs font-bold">${tObj.badge}</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      ${tObj.tricks.map(tr => `
+                        <div class="bg-slate-900/95 border border-slate-800 rounded-xl p-4 space-y-2.5 flex flex-col justify-between">
+                          <div class="space-y-1.5">
+                            <div class="flex items-center justify-between gap-2">
+                              <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-xs font-black">${tr.code}</span>
+                              <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-300 text-[11px] font-bold">${tr.category}</span>
+                            </div>
+                            <h5 class="text-sm sm:text-base font-extrabold text-white">${tr.name}</h5>
+                            <div class="text-xs text-purple-300 font-semibold">🇯🇵 ${tr.jp_name}</div>
+                            <p class="text-xs text-slate-200 leading-relaxed pt-1">${tr.steps}</p>
+                          </div>
+                          <div class="p-2.5 rounded-lg bg-rose-950/30 border border-rose-500/30 text-xs text-rose-200">
+                            ⚠️ <strong>${tr.common_error}</strong>
+                          </div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
             </div>
           `;
         }
@@ -2748,8 +3277,6 @@
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">${s.coach_summary}</p>
             </div>
 
-            ${specialBanner}
-
             <!-- Visual Illustrations: Photo + 2 Biomechanical SVG Diagrams -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div class="bg-slate-900/90 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between">
@@ -2776,118 +3303,118 @@
             <div class="space-y-3">
               <h3 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
                 <span class="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/40 text-sky-300 flex items-center justify-center text-xs font-black">1</span>
-                <span>各階段核心技巧、進階練習與生物力學拆解 (Technical Skills & Drills)</span>
+                <span>🛠️ 需具備的核心技巧與實戰練習分解 (Technical Skills & Progressive Drills)</span>
               </h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 ${s.skills.map(sk => `
-                  <div class="bg-slate-900/75 border border-slate-800 rounded-2xl p-4 space-y-2 hover:border-sky-500/40 transition">
+                  <div class="bg-slate-900/85 border border-slate-800 rounded-2xl p-4 space-y-2 glass-card-hover">
                     <h4 class="text-sm font-extrabold text-sky-300">${sk.name}</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">${sk.steps}</p>
+                    <p class="text-xs text-slate-300 leading-relaxed whitespace-pre-line">${sk.steps}</p>
                   </div>
                 `).join('')}
               </div>
             </div>
 
-            <!-- 2. Mental Awareness & Proprioception + 3. Performance Standards -->
+            <!-- Embedded Specialized Content Directly Inside Stage (Sam Drills / Carving Low Position / Ground Tricks) -->
+            ${embeddedSamHtml}
+            ${embeddedCarvingHtml}
+            ${embeddedGratoriHtml}
+
+            <!-- 2. Mental Awareness & Proprioception -->
+            <div class="space-y-3">
+              <h3 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 flex items-center justify-center text-xs font-black">2</span>
+                <span>🧠 意識上需要具備的能力 (Awareness, Proprioception & Mindset)</span>
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-1.5">
+                  <div class="text-xs font-bold text-sky-400">👁️ 動態視覺與路線意識 (Vision)</div>
+                  <p class="text-xs text-slate-300 leading-relaxed">${s.awareness.vision}</p>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-1.5">
+                  <div class="text-xs font-bold text-emerald-400">🦶 本體感覺與足底壓力 (Proprioception)</div>
+                  <p class="text-xs text-slate-300 leading-relaxed">${s.awareness.proprioception}</p>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-1.5">
+                  <div class="text-xs font-bold text-amber-400">🧘 心理建設與呼吸節奏 (Mindset)</div>
+                  <p class="text-xs text-slate-300 leading-relaxed">${s.awareness.mindset}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Performance Standards & 4. Precautions / Pro Tips -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-              <div class="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-2xl p-5 space-y-3.5">
+              <!-- Standards -->
+              <div class="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
                 <h3 class="text-base font-extrabold text-white flex items-center gap-2">
-                  <span class="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/40 text-purple-300 flex items-center justify-center text-xs font-black">2</span>
-                  <span>意識上需具備的三維能力 (Awareness & Proprioception)</span>
+                  <span class="w-6 h-6 rounded-md bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center text-xs font-black">3</span>
+                  <span>📏 動作量化達成標準 (Standards)</span>
                 </h3>
-                <div class="space-y-2.5 text-xs">
-                  <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90">
-                    <div class="font-bold text-sky-300 mb-1">👁️ 視覺導航意識 (Vision & Line Reading)</div>
-                    <p class="text-slate-300 leading-relaxed">${s.awareness.vision}</p>
-                  </div>
-                  <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90">
-                    <div class="font-bold text-emerald-300 mb-1">🦶 足底與關節本體感覺 (Proprioception & Edge Feel)</div>
-                    <p class="text-slate-300 leading-relaxed">${s.awareness.proprioception}</p>
-                  </div>
-                  <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90">
-                    <div class="font-bold text-amber-300 mb-1">🧠 心智與呼吸節奏意識 (Mindset & Rhythm)</div>
-                    <p class="text-slate-300 leading-relaxed">${s.awareness.mindset}</p>
-                  </div>
-                </div>
+                <ul class="space-y-2 text-xs text-slate-300">
+                  ${s.standards.map(st => `
+                    <li class="flex items-start gap-2 leading-relaxed">
+                      <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                      <span>${st}</span>
+                    </li>
+                  `).join('')}
+                </ul>
               </div>
 
-              <div class="lg:col-span-5 bg-slate-900/80 border border-slate-800 rounded-2xl p-5 space-y-3.5 flex flex-col justify-between">
-                <div class="space-y-3">
-                  <h3 class="text-base font-extrabold text-white flex items-center gap-2">
-                    <span class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center text-xs font-black">3</span>
-                    <span>動作與技術量化標準 (Standards)</span>
-                  </h3>
-                  <ul class="space-y-2.5 text-xs text-slate-200">
-                    ${s.standards.map(st => `
-                      <li class="flex items-start gap-2 bg-slate-950/70 p-2.5 rounded-xl border border-slate-800/80">
-                        <span class="text-emerald-400 font-black mt-0.5">✔</span>
-                        <span class="leading-relaxed">${st}</span>
-                      </li>
-                    `).join('')}
-                  </ul>
-                </div>
-                <div class="p-3 rounded-xl bg-sky-500/10 border border-sky-500/25 text-[11px] text-sky-200">
-                  💡 <strong>生物力學黃金定律</strong>：所有標準皆以「三關節微屈折疊、骨盆正位不折腰、視線超前不看腳」為前提。
-                </div>
-              </div>
-            </div>
-
-            <!-- 4. Safety Precautions & Pro Tips -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div class="bg-rose-950/20 border border-rose-500/35 rounded-2xl p-5 space-y-3">
-                <h3 class="text-sm sm:text-base font-extrabold text-rose-300 flex items-center gap-2">
-                  <span>⚠️ 需注意事項與防卡刃安全紅線 (Precautions)</span>
+              <!-- Warnings & Pro Tips -->
+              <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-4">
+                <h3 class="text-base font-extrabold text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-md bg-amber-500/20 border border-amber-400/40 text-amber-300 flex items-center justify-center text-xs font-black">4</span>
+                  <span>⚠️ 需注意事項與教練團私房 Tips (Precautions & Pro Tips)</span>
                 </h3>
-                <ul class="space-y-2.5 text-xs text-slate-200">
+                <div class="space-y-2">
                   ${s.precautions_and_tips.warnings.map(w => `
-                    <li class="p-3 rounded-xl bg-rose-950/35 border border-rose-500/25 leading-relaxed">${w}</li>
+                    <div class="p-3 rounded-xl bg-rose-950/35 border border-rose-500/30 text-xs text-rose-200 leading-relaxed">${w}</div>
                   `).join('')}
-                </ul>
-              </div>
-              <div class="bg-amber-950/20 border border-amber-500/35 rounded-2xl p-5 space-y-3">
-                <h3 class="text-sm sm:text-base font-extrabold text-amber-300 flex items-center gap-2">
-                  <span>💡 教練團私房破關 Tips 與秒懂體感口訣</span>
-                </h3>
-                <ul class="space-y-2.5 text-xs text-slate-200">
-                  ${s.precautions_and_tips.tips.map(t => `
-                    <li class="p-3 rounded-xl bg-amber-950/35 border border-amber-500/25 leading-relaxed">${t}</li>
+                </div>
+                <div class="space-y-2 pt-1">
+                  ${s.precautions_and_tips.tips.map(tp => `
+                    <div class="p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 text-xs text-amber-100 leading-relaxed">${tp}</div>
                   `).join('')}
-                </ul>
+                </div>
               </div>
             </div>
 
-            <!-- 5. Real Verified YouTube Videos -->
-            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <h3 class="text-base font-extrabold text-white flex items-center gap-2">
-                  <span class="w-7 h-7 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-300 flex items-center justify-center text-xs font-black">5</span>
-                  <span>🎬 真實示範教學影片 (${s.videos.length} 部精選實拍教學)</span>
-                </h3>
-                <span class="text-[11px] text-slate-400">可點擊「內嵌播放」直接觀看，或點擊「YouTube 原片直達」開啟原片</span>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                ${s.videos.map((v, vIdx) => {
-                  const embedId = `embed-${s.id}-${vIdx}`;
+            <!-- 5. Verified Real Instructional Videos -->
+            <div class="space-y-3">
+              <h3 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-300 flex items-center justify-center text-xs font-black">5</span>
+                <span>🎬 真實示範教學影片（共 ${s.videos.length} 部高畫質 YouTube 實拍教學）</span>
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                ${s.videos.map((v, idx) => {
+                  const embedBoxId = `vid-embed-${s.id}-${idx}`;
+                  const thumbId = v.video_id === 'isFO112WbNH' ? 'qHy-goO6vGQ' : v.video_id;
                   return `
-                    <div class="bg-slate-950/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between space-y-3">
-                      <div class="space-y-1.5">
-                        <div class="flex items-center justify-between gap-2 text-[11px]">
-                          <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">▶ ${v.channel}</span>
-                          <span class="text-slate-400 font-mono">${v.views}</span>
-                        </div>
-                        <div class="text-sm font-extrabold text-white leading-snug">${v.title}</div>
-                        <p class="text-xs text-slate-300 leading-relaxed">${v.focus}</p>
-                      </div>
+                    <div class="bg-slate-900/95 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between glass-card-hover">
                       <div>
-                        <div class="flex flex-wrap items-center gap-2 pt-1">
-                          <button onclick="toggleVideoEmbed('${v.video_id}', '${embedId}')" class="px-3 py-1.5 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-400/30 text-xs font-bold transition">
-                            📺 展開/收合內嵌播放器
+                        <div class="relative group cursor-pointer" onclick="toggleVideoEmbed('${thumbId}', '${embedBoxId}')">
+                          <img src="https://i.ytimg.com/vi/${thumbId}/hqdefault.jpg" alt="${v.title}" class="w-full h-36 object-cover max-w-full" />
+                          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition flex items-center justify-center">
+                            <div class="w-11 h-11 rounded-full bg-rose-600/95 text-white flex items-center justify-center shadow-lg font-bold text-sm">▶</div>
+                          </div>
+                          <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] text-slate-200 font-semibold">${v.views}</span>
+                        </div>
+                        <div class="p-3.5 space-y-1.5">
+                          <div class="text-[11px] font-bold text-sky-400">${v.channel}</div>
+                          <h4 class="text-xs font-extrabold text-white line-clamp-2 leading-snug">${v.title}</h4>
+                          <p class="text-[11px] text-slate-400 leading-relaxed">${v.focus}</p>
+                        </div>
+                      </div>
+                      <div class="px-3.5 pb-3.5 pt-1 flex flex-col gap-2">
+                        <div class="flex items-center gap-1.5">
+                          <button onclick="toggleVideoEmbed('${thumbId}', '${embedBoxId}')" class="flex-1 py-1.5 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-bold text-sky-300 border border-slate-700">
+                            📺 站內展開播放
                           </button>
-                          <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold transition">
-                            🔗 YouTube 原片直達 ↗
+                          <a href="${v.url}" target="_blank" rel="noopener" class="py-1.5 px-2.5 rounded-lg bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 text-[11px] font-bold">
+                            YouTube ↗
                           </a>
                         </div>
-                        <div id="${embedId}" class="hidden"></div>
+                        <div id="${embedBoxId}" class="hidden"></div>
                       </div>
                     </div>
                   `;
@@ -2895,8 +3422,8 @@
               </div>
             </div>
 
-            <!-- 6. Quantitative Verification Rubric & Interactive Self-Check -->
-            <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/25 border border-emerald-500/40 rounded-2xl p-5 space-y-4">
+            <!-- 6. Interactive Stage Verification Checklist -->
+            <div class="bg-slate-900/95 border border-emerald-500/35 rounded-2xl p-5 space-y-4">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
                 <div>
                   <h3 class="text-base font-extrabold text-white flex items-center gap-2">
@@ -2942,111 +3469,12 @@
 
             <!-- Next/Prev Stage Navigation -->
             <div class="flex items-center justify-between pt-2">
-              ${s.id !== 'L1' ? `<button onclick="selectStage('L${parseInt(s.id.slice(1))-1}')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200">⬅ 上一階段 (L${parseInt(s.id.slice(1))-1})</button>` : '<div></div>'}
-              ${s.id !== 'L8' ? `<button onclick="selectStage('L${parseInt(s.id.slice(1))+1}')" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-xs font-extrabold text-slate-950">下一階段 (L${parseInt(s.id.slice(1))+1}) ➔</button>` : '<div></div>'}
+              ${stageNum > 0 ? `<button onclick="selectStage('L${stageNum - 1}')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200">⬅ 上一階段 (L${stageNum - 1})</button>` : '<div></div>'}
+              ${stageNum < 8 ? `<button onclick="selectStage('L${stageNum + 1}')" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-xs font-extrabold text-slate-950">下一階段 (L${stageNum + 1}) ➔</button>` : '<div></div>'}
             </div>
           </article>
         `;
       }).join('');
-    }
-
-    function renderSamDrillsSection() {
-      document.getElementById('sam-svg-box-1').innerHTML = getStageSvg('l3_early_vs_late_edge');
-      document.getElementById('sam-svg-box-2').innerHTML = getStageSvg('l4_sam_drills_corridor');
-      const grid = document.getElementById('sam-drills-grid');
-      grid.innerHTML = BOOK_DATA.sam_drills_matrix.map(d => `
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3 glass-card-hover flex flex-col justify-between">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between gap-2">
-              <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-black">${d.code}</span>
-              <span class="px-2.5 py-0.5 rounded bg-slate-800 text-sky-300 text-xs font-bold">${d.stage}</span>
-            </div>
-            <h4 class="text-base font-extrabold text-white">${d.name}</h4>
-            <div class="p-2.5 rounded-xl bg-rose-950/30 border border-rose-500/30 text-xs text-rose-200">
-              🩺 <strong>${d.problem_fixed}</strong>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed pt-1">
-              <strong class="text-sky-300">🏂 雪上執行步驟：</strong>${d.execution}
-            </p>
-          </div>
-          <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-xs text-emerald-200 mt-2">
-            ✅ <strong>驗收標準：</strong>${d.check_standard}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderCarvingSection() {
-      document.getElementById('carving-low-svg-box').innerHTML = getStageSvg('l5_low_position_anatomy');
-      const pList = document.getElementById('carving-principles-list');
-      pList.innerHTML = BOOK_DATA.carving_low_position_mastery.core_principles.map(p => `
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 space-y-1.5">
-          <h4 class="text-sm font-extrabold text-amber-300">${p.title}</h4>
-          <p class="text-xs text-slate-300 leading-relaxed">${p.detail}</p>
-        </div>
-      `).join('');
-
-      const tGrid = document.getElementById('carving-tricks-grid');
-      tGrid.innerHTML = BOOK_DATA.carving_low_position_mastery.tricks_catalog.map(t => `
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3 glass-card-hover flex flex-col justify-between">
-          <div class="space-y-2">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-xs font-black">${t.id} · ${t.difficulty}</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-300 font-mono text-[11px]">推薦站姿：${t.stance_rec}</span>
-            </div>
-            <h4 class="text-base font-extrabold text-white">${t.name}</h4>
-            <div class="text-xs text-amber-400/90 font-semibold">🇯🇵 ${t.jp_name}</div>
-            <p class="text-xs text-slate-300 leading-relaxed pt-1">${t.mechanics}</p>
-          </div>
-          <div class="p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 text-xs text-amber-200">
-            💡 <strong>破關秘訣：</strong>${t.key_tip}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderGratoriSection(tierFilter = 'ALL') {
-      document.getElementById('gt-svg-box-1').innerHTML = getStageSvg('ground_trick_mechanics');
-      document.getElementById('gt-svg-box-2').innerHTML = getStageSvg('l6_owen_sone_drivespin');
-
-      const container = document.getElementById('gt-tiers-container');
-      const tiers = tierFilter === 'ALL'
-        ? BOOK_DATA.ground_trick_encyclopedia
-        : [BOOK_DATA.ground_trick_encyclopedia[parseInt(tierFilter)]];
-
-      container.innerHTML = tiers.map(tObj => `
-        <div class="space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
-            <h4 class="text-base sm:text-lg font-black text-purple-300">${tObj.tier}</h4>
-            <span class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-200 text-xs font-bold">${tObj.badge}</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            ${tObj.tricks.map(tr => `
-              <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3 glass-card-hover flex flex-col justify-between">
-                <div class="space-y-2">
-                  <div class="flex items-center justify-between gap-2">
-                    <span class="px-2.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-xs font-black">${tr.code}</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-800 text-sky-300 text-[11px] font-bold">${tr.category}</span>
-                  </div>
-                  <h5 class="text-base font-extrabold text-white">${tr.name}</h5>
-                  <div class="text-xs text-purple-300 font-semibold">🇯🇵 ${tr.jp_name}</div>
-                  <p class="text-xs text-slate-200 leading-relaxed pt-1">${tr.steps}</p>
-                </div>
-                <div class="p-3 rounded-xl bg-rose-950/30 border border-rose-500/30 text-xs text-rose-200">
-                  ⚠️ <strong>${tr.common_error}</strong>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function filterGtTier(tierKey) {
-      document.querySelectorAll('.gt-tier-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-tier') === tierKey);
-      });
-      renderGratoriSection(tierKey);
     }
 
     function renderDebatesAndCoaches(filterKey = 'ALL') {
@@ -3059,52 +3487,49 @@
         </div>
       `).join('');
 
-      const groupMap = {
-        BASIC: ['C01', 'C02', 'C06', 'C15', 'C17', 'C19'],
-        CARVE: ['C01', 'C03', 'C04', 'C12', 'C14'],
-        FREE: ['C04', 'C05', 'C06', 'C07', 'C08', 'C16'],
-        MTN: ['C09', 'C10', 'C11', 'C16', 'C19'],
-        SCI: ['C12', 'C13', 'C14', 'C18', 'C20']
-      };
-
-      const filtered = filterKey === 'ALL'
-        ? BOOK_DATA.coaches_panel
-        : BOOK_DATA.coaches_panel.filter(c => (groupMap[filterKey] || []).includes(c.id));
-
       const coachesGrid = document.getElementById('coaches-grid');
+      const filtered = BOOK_DATA.coaches_panel.filter(c => {
+        if (filterKey === 'ALL') return true;
+        if (filterKey === 'BASIC') return c.lead_stages.some(st => ['L0','L1','L2','L3','L4'].includes(st));
+        if (filterKey === 'CARVE') return c.lead_stages.includes('L5');
+        if (filterKey === 'FREE') return c.lead_stages.some(st => ['L6','L7'].includes(st));
+        if (filterKey === 'MTN') return c.lead_stages.includes('L8');
+        if (filterKey === 'SCI') return ['C12','C13','C14','C15','C17','C18','C19','C20'].includes(c.id);
+        return true;
+      });
+
       coachesGrid.innerHTML = filtered.map(c => `
         <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between space-y-3 glass-card-hover">
-          <div class="space-y-1.5">
+          <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono text-xs font-black">${c.id}</span>
-              <div class="flex gap-1">
-                ${c.lead_stages.map(st => `<span onclick="switchMainSection('stages'); selectStage('${st}');" class="cursor-pointer px-1.5 py-0.5 rounded bg-slate-800 hover:bg-sky-500 hover:text-slate-950 text-[10px] font-bold text-slate-300 transition">${st}</span>`).join('')}
-              </div>
+              <span class="text-[11px] text-amber-300 font-bold">主筆：${c.lead_stages.join(', ')}</span>
             </div>
-            <h4 class="text-sm font-extrabold text-white pt-1">${c.name}</h4>
-            <div class="text-[11px] text-amber-300 font-semibold">${c.role}</div>
-            <div class="text-[11px] text-slate-400">專長：${c.domain}</div>
+            <h4 class="text-sm font-extrabold text-white">${c.name}</h4>
+            <div class="text-[11px] text-sky-400 font-semibold leading-snug">${c.role}</div>
+            <div class="text-[11px] text-slate-400">${c.domain}</div>
+            <blockquote class="p-2.5 rounded-xl bg-slate-950/90 border-l-2 border-sky-400 text-[11px] text-slate-200 italic leading-relaxed">
+              ${c.philosophy}
+            </blockquote>
           </div>
-          <div class="space-y-2 pt-2 border-t border-slate-800/80 text-xs">
-            <blockquote class="italic text-sky-200 bg-slate-950/70 p-2.5 rounded-xl border border-slate-800/80">${c.philosophy}</blockquote>
-            <div class="text-[11px] text-slate-300">📌 <strong>編纂貢獻</strong>：${c.key_contribution}</div>
+          <div class="pt-2 border-t border-slate-800/80 text-[11px] text-emerald-300">
+            <strong>核心貢獻：</strong>${c.key_contribution}
           </div>
         </div>
       `).join('');
     }
 
-    function filterCoaches(key) {
+    function filterCoaches(filterKey) {
       document.querySelectorAll('.coach-filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-filter') === key);
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === filterKey);
       });
-      renderDebatesAndCoaches(key);
+      renderDebatesAndCoaches(filterKey);
     }
 
     function renderPassport() {
       const grid = document.getElementById('passport-grid');
       grid.innerHTML = BOOK_DATA.stages.map(s => {
-        const done = s.verification_rubric.items.filter(i => checkedRubrics[i.code]).length;
-        const total = s.verification_rubric.items.length;
+        const doneCount = s.verification_rubric.items.filter(i => checkedRubrics[i.code]).length;
         return `
           <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
             <div class="flex items-center justify-between border-b border-slate-800 pb-2.5">
@@ -3112,16 +3537,20 @@
                 <span class="text-xs font-black text-sky-400 font-display">${s.code}</span>
                 <h4 class="text-sm font-extrabold text-white">${s.name}</h4>
               </div>
-              <span class="px-2.5 py-1 rounded-full text-xs font-bold ${done === total ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-300'}">${done} / ${total}</span>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-bold ${doneCount === s.verification_rubric.items.length ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-300'}">
+                ${doneCount} / ${s.verification_rubric.items.length}
+              </span>
             </div>
             <div class="space-y-2">
               ${s.verification_rubric.items.map(it => {
                 const isChecked = !!checkedRubrics[it.code];
                 return `
-                  <div onclick="toggleRubricItem('${it.code}')" class="cursor-pointer p-2.5 rounded-xl border text-xs flex items-start gap-2.5 transition ${isChecked ? 'bg-emerald-500/15 border-emerald-500/50 text-white' : 'bg-slate-950/70 border-slate-800 text-slate-300'}">
-                    <span class="w-4 h-4 rounded flex items-center justify-center font-bold text-[10px] mt-0.5 shrink-0 ${isChecked ? 'bg-emerald-400 text-slate-950' : 'bg-slate-800 border border-slate-600 text-transparent'}">✓</span>
-                    <div>
-                      <strong class="text-sky-300 font-mono">${it.code}</strong> <strong>${it.item}</strong>：${it.criterion}
+                  <div onclick="toggleRubricItem('${it.code}')" class="cursor-pointer p-2.5 rounded-xl border transition flex items-start gap-2.5 ${isChecked ? 'bg-emerald-500/15 border-emerald-400/50' : 'bg-slate-950/70 border-slate-800'}">
+                    <div class="w-4 h-4 rounded mt-0.5 flex items-center justify-center text-[10px] font-black shrink-0 ${isChecked ? 'bg-emerald-400 text-slate-950' : 'bg-slate-800 border border-slate-600 text-transparent'}">✓</div>
+                    <div class="text-xs">
+                      <span class="font-mono font-bold text-sky-300">${it.code}</span>
+                      <span class="font-bold text-white ml-1">${it.item}</span>
+                      <p class="text-[11px] text-slate-400 mt-0.5">${it.criterion}</p>
                     </div>
                   </div>
                 `;
@@ -3132,40 +3561,62 @@
       }).join('');
     }
 
-    function copyTextFallback(text) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      try {
-        document.execCommand('copy');
-        showToast('📋 已複製個人檢定成績單至剪貼簿！');
-      } catch (e) {
-        showToast('⚠️ 複製失敗，請手動選取');
+    function selectStage(stageId) {
+      currentStageId = stageId;
+      stageDisplayMode = 'single';
+      updateModeButtons();
+      renderStageTabs();
+      renderStages();
+      window.scrollTo({ top: 280, behavior: 'smooth' });
+    }
+
+    function setStageDisplayMode(mode) {
+      stageDisplayMode = mode;
+      updateModeButtons();
+      renderStageTabs();
+      renderStages();
+    }
+
+    function updateModeButtons() {
+      const bSingle = document.getElementById('btn-mode-single');
+      const bAll = document.getElementById('btn-mode-all');
+      if (stageDisplayMode === 'single') {
+        bSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40';
+        bAll.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700';
+      } else {
+        bAll.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40';
+        bSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700';
       }
-      document.body.removeChild(ta);
+    }
+
+    function switchMainSection(sec) {
+      currentMainSection = sec;
+      ['stages', 'coaches', 'passport'].forEach(k => {
+        const el = document.getElementById(`section-${k}`);
+        const nav = document.getElementById(`nav-${k}`);
+        if (el) el.classList.toggle('hidden', k !== sec);
+        if (nav) nav.classList.toggle('active', k === sec);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function copyPassportReport() {
-      let lines = ['# 🏂 SB-SKILL V2.0 個人單板滑雪晉級檢定護照 (48-Point Skill Passport)', ''];
+      let lines = [`# 🏂 SB-SKILL V3.0 單板滑雪檢定成績單 (L0–L8 共 54 項)`];
       BOOK_DATA.stages.forEach(s => {
         const done = s.verification_rubric.items.filter(i => checkedRubrics[i.code]).length;
-        lines.push(`## ${s.code} ${s.name} (${done}/${s.verification_rubric.items.length})`);
+        lines.push(`\n## ${s.code} - ${s.name} (${done}/${s.verification_rubric.items.length})`);
         s.verification_rubric.items.forEach(it => {
-          const mark = checkedRubrics[it.code] ? '[x]' : '[ ]';
-          lines.push(`- ${mark} **${it.code} ${it.item}**：${it.criterion}`);
+          lines.push(`- [${checkedRubrics[it.code] ? 'x' : ' '}] **${it.code} ${it.item}**：${it.criterion}`);
         });
-        lines.push('');
       });
-      copyTextFallback(lines.join('\n'));
+      navigator.clipboard.writeText(lines.join('\n')).then(() => {
+        showToast('📋 已複製個人檢定成績單 (Markdown 格式)！');
+      });
     }
 
     function openGithubModal() {
       document.getElementById('github-modal').classList.remove('hidden');
     }
-
     function closeGithubModal() {
       document.getElementById('github-modal').classList.add('hidden');
     }
@@ -3173,103 +3624,94 @@
     function downloadFile(filename) {
       let content = '';
       let mime = 'text/plain;charset=utf-8';
-      if (filename === 'itinerary.json') {
+      if (filename === 'index.html') {
+        content = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+        mime = 'text/html;charset=utf-8';
+      } else if (filename === 'itinerary.json') {
         content = JSON.stringify(BOOK_DATA, null, 2);
         mime = 'application/json;charset=utf-8';
       } else if (filename === 'README.md') {
-        content = `# ${BOOK_DATA.book_title}\n\nGitHub Account: jonwenjen | Repo: SB-skill\n\n` +
-          BOOK_DATA.stages.map(s => `## ${s.code} ${s.name}\n- 場域：${s.slope_target}\n- 總綱：${s.coach_summary}\n`).join('\n');
+        content = `# ${BOOK_DATA.book_title}\n\n請參閱完整互動版網頁或儲存庫內之 README.md。`;
         mime = 'text/markdown;charset=utf-8';
-      } else {
-        content = document.documentElement.outerHTML;
-        mime = 'text/html;charset=utf-8';
       }
       const blob = new Blob([content], { type: mime });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = filename;
-      document.body.appendChild(a);
       a.click();
-      document.body.removeChild(a);
       URL.revokeObjectURL(url);
       showToast(`⬇️ 已開始下載 ${filename}`);
     }
 
     function utf8ToBase64(str) {
-      const bytes = new TextEncoder().encode(str);
-      let binString = '';
-      const chunkSize = 0x8000;
-      for (let i = 0; i < bytes.length; i += chunkSize) {
-        binString += String.fromCharCode.apply(null, bytes.subarray(i, i + chunkSize));
+      return btoa(unescape(encodeURIComponent(str)));
+    }
+
+    async function pushSingleFileToGithub(owner, repo, path, contentStr, token, message) {
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+      let sha = null;
+      const getRes = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json'
+        }
+      });
+      if (getRes.ok) {
+        const data = await getRes.json();
+        sha = data.sha;
       }
-      return btoa(binString);
+      const bodyObj = {
+        message: message,
+        content: utf8ToBase64(contentStr),
+        branch: 'main'
+      };
+      if (sha) bodyObj.sha = sha;
+
+      const putRes = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bodyObj)
+      });
+      if (!putRes.ok) {
+        const err = await putRes.text();
+        throw new Error(`Push ${path} failed: ${putRes.status} ${err}`);
+      }
+      return await putRes.json();
     }
 
     async function pushToGithubNow() {
-      const owner = document.getElementById('gh-owner').value.trim() || 'jonwenjen';
-      const repo = document.getElementById('gh-repo').value.trim() || 'SB-skill';
+      const owner = document.getElementById('gh-owner').value.trim();
+      const repo = document.getElementById('gh-repo').value.trim();
       const token = document.getElementById('gh-token').value.trim();
       const statusEl = document.getElementById('gh-push-status');
       if (!token) {
-        statusEl.textContent = '⚠️ 請先輸入 GitHub Personal Access Token (PAT)！';
-        statusEl.className = 'text-xs text-amber-400 font-bold';
+        showToast('⚠️ 請先輸入 GitHub Personal Access Token (PAT)');
         return;
       }
-      statusEl.textContent = '⏳ 正在透過 GitHub API 推送至 ' + owner + '/' + repo + '...';
-      statusEl.className = 'text-xs text-sky-400 font-bold';
       try {
-        const filesToPush = [
-          { path: 'index.html', content: '<!DOCTYPE html>\n' + document.documentElement.outerHTML },
-          { path: 'itinerary.json', content: JSON.stringify(BOOK_DATA, null, 2) }
-        ];
-        for (const f of filesToPush) {
-          const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${f.path}`;
-          let sha = null;
-          const getRes = await fetch(apiUrl, {
-            headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' }
-          });
-          if (getRes.ok) {
-            const meta = await getRes.json();
-            sha = meta.sha;
-          }
-          const b64 = utf8ToBase64(f.content);
-          const bodyObj = {
-            message: `Update ${f.path} via SB-SKILL V2.0 System`,
-            content: b64,
-            branch: 'main'
-          };
-          if (sha) bodyObj.sha = sha;
-          const putRes = await fetch(apiUrl, {
-            method: 'PUT',
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github+json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(bodyObj)
-          });
-          if (!putRes.ok) throw new Error(`HTTP ${putRes.status} on ${f.path}`);
-        }
-        statusEl.textContent = `✅ 成功推送至 https://github.com/${owner}/${repo}！`;
-        statusEl.className = 'text-xs text-emerald-400 font-bold';
-        showToast(`🚀 已成功同步至 GitHub ${owner}/${repo}！`);
+        statusEl.textContent = '⏳ 正在推送 index.html 與 itinerary.json 至 GitHub...';
+        const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+        await pushSingleFileToGithub(owner, repo, 'index.html', htmlContent, token, 'feat: upgrade SB-skill to V3.0 unified L0-L8 edition');
+        await pushSingleFileToGithub(owner, repo, 'itinerary.json', JSON.stringify(BOOK_DATA, null, 2), token, 'feat: update itinerary.json to V3.0 unified L0-L8');
+        statusEl.textContent = '✅ 推送成功！請至 GitHub 檢視最新 V3.0 內容。';
+        showToast('🎉 成功推送 V3.0 至 GitHub: ' + owner + '/' + repo);
       } catch (err) {
         statusEl.textContent = '❌ 推送失敗：' + err.message;
-        statusEl.className = 'text-xs text-rose-400 font-bold';
+        showToast('❌ 推送失敗，請確認 Token 權限 (需勾選 repo)');
       }
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      updateProgressUI();
-      renderStageTabs();
-      renderStages();
-      renderSamDrillsSection();
-      renderCarvingSection();
-      renderGratoriSection('ALL');
-      renderDebatesAndCoaches('ALL');
-      renderPassport();
-    });
+    // Initialize UI
+    updateProgressUI();
+    renderStageTabs();
+    renderStages();
+    renderDebatesAndCoaches('ALL');
+    renderPassport();
   </script>
 </body>
 </html>
