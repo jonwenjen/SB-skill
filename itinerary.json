@@ -305,8 +305,8 @@
     {
       "id": "L0",
       "code": "STAGE L0",
-      "name": "雪場基本常識：雪票分類精算、雪道安全鐵律與日本雪場禮儀",
-      "en_name": "Resort Essentials: Lift Pass Strategy (4-Hour Pass), Slope Etiquette & Japan Manners",
+      "name": "雪場基本常識、雪季前 4–6 週專項體能計畫與上雪前全身防傷/防受燒動態暖身",
+      "en_name": "Resort Essentials, 4–6 Week Pre-Season Conditioning & Pre-Ride Full-Body Warm-Up",
       "badge_color": "amber",
       "slope_target": "雪場售票處、更衣室、纜車閘門與初級綠線雪道全區",
       "recommended_Hours": "上雪前必讀 30 分鐘 (Day 1 出發前)",
@@ -314,7 +314,9 @@
         "金荷娜 (雪場安全巡邏隊長)",
         "高橋健司 (JSBA A級總召)",
         "Liam Vance (CASI Lv4)",
-        "Wolfgang Bauer (器材調校)"
+        "Wolfgang Bauer (器材調校)",
+        "Alexei Volkov (體能與離雪訓練總監)",
+        "林敬軒博士 (運動生物力學)"
       ],
       "coach_summary": "【THE SNOWBOARD MASTERY BIBLE · 20位跨領域單板專業教練團隊共編總序】本書由加拿大 CASI、美國 AASI、日本 JSBA / SAJ、歐洲 Swoard EC 極限刻滑、X-Games 公園國家隊教練、北海道粉雪嚮導與運動生物力學博士組成的「20人教練智庫」共編，完整統整為 L0–L8 九大進階階段。踏上雪場的第一步不是穿雪板，而是懂得「如何聰明買雪票不浪費錢（特別是首刷閘門才起算的 4小時彈性時間券）」、「絕對不坐在雪道中間或盲坡折角下方」以及「入境隨俗的日本雪場禮儀」。",
       "image_key": "photo_l0",
@@ -333,6 +335,16 @@
           "svg_id": "l0_ticket_flowchart",
           "title": "圖解 L0-2｜日本雪場雪票精算決策樹與「4小時彈性時間券」計時邏輯 / Fig. L0-2 | Lift Pass Decision Tree & 4-Hour Flex Pass Timing Mechanism",
           "logic_note": "【中文】Day 1 上午在坡底練站姿買『點數券』；Day 2–3 買『4小時時間券 (4時間券)』，並非購票起算，而是『第一次刷過纜車閘門瞬間』才啟動倒數 240 分鐘，第 239 分鐘還能壓線刷上山頂！<br><span class='text-sky-300/90'>【EN】Buy Point Tickets on Day 1 morning; choose the 4-Hour Flex Pass on Days 2–3. The 240-minute countdown starts ONLY upon your first RFID gate scan (not at ticket purchase), and you can scan one last top-to-bottom run at minute 239!</span>"
+        },
+        {
+          "svg_id": "l0_preseason_conditioning",
+          "title": "圖解 L0-3｜雪季前 4–6 週單板常用肌群解剖熱區與三階段強化課表 / Fig. L0-3 | 4–6 Week Pre-Season Snowboard Muscle Anatomy & 3-Phase Stability Plan",
+          "logic_note": "【中文】針對單板最易酸燒與受傷的 5 大部位（股四頭離心、臀中肌防內扣、脛前肌/比目魚肌、抗旋轉核心、踝背屈活動度），於出發前 4–6 週依「活動度等長 ➔ 離心單腳穩定 ➔ 代謝抗酸爆發」三階段遞進強化。<br><span class='text-sky-300/90'>【EN】Targets the 5 key snowboard muscle & stability groups (Quad eccentric, Glute Medius anti-valgus, Tibialis/Soleus, Anti-rotation core, Ankle dorsiflexion) across a 3-phase 4–6 week progression before hitting the snow.</span>"
+        },
+        {
+          "svg_id": "l0_preride_warmup",
+          "title": "圖解 L0-4｜上雪前 10 分鐘全身 6 大部位動態暖身與「防大腿受燒」充血邏輯圖 / Fig. L0-4 | 10-Min Pre-Ride 6-Zone Dynamic Warm-Up & Anti-Quad-Burn Protocol",
+          "logic_note": "【中文】零下低溫嚴禁冷身靜態拉筋！透過『頸肩大風車 ➔ 手腕8字防撐地 ➔ 胸椎轉體 ➔ 3D擺腿開髖 ➔ 1.5蹲充血防受燒 ➔ 穿靴壓靴舌搖擺』6步驟動態激活，搭配第一趟綠線緩坡開機，徹底告別第一趟大腿酸燒鎖死。<br><span class='text-sky-300/90'>【EN】Never do cold static stretching! Use this 6-zone dynamic RAMP warm-up (Neck/Shoulders ➔ Wrist 8-circles ➔ Thoracic twist ➔ 3D hip swings ➔ 1.5 Squat pulses to prevent early quad burn ➔ In-Boot ankle flex) before your first run.</span>"
         }
       ],
       "l0_special_modules": {
@@ -381,7 +393,89 @@
           "🇯🇵 【日本禮儀 3：纜車排隊『交替合流』與補滿座位！】排隊時雪板請直放或抱在手上，切勿橫放踩傷後方的雪板板面 (Topsheet)。若排在『單人通道 (Single Line)』，請聽從工作人員手勢主動補進 3 缺 1 的纜車；放安全護欄 (Safety Bar) 前請先輕聲說一句『失礼します (Shitsurei shimasu) / Bar OK?』提醒同車乘客小心頭頂。",
           "🇯🇵 【日本禮儀 4：雪場溫泉 (Onsen) 入浴守則！】滑完雪泡溫泉是日本最棒的享受：進入浴池前必須先在坐式淋浴區『坐著把全身徹底洗淨』（切勿站著沖澡噴濺鄰座）；大浴巾不可浸入泉水中，長髮需盤起，若有刺青請先確認雪場溫泉是否允許或使用防水膚色貼布遮蓋。",
           "🇯🇵 【日本禮儀 5：遵守雪場紅線繩 (Rope Ducking 嚴禁鑽繩)！】日本雪場對『跨越管制紅繩進入未開放區域（コース外滑走）』執法極嚴，一旦違規被巡邏隊 (Patrol) 發現，會當場沒收雪票；若引發雪崩搜救，將面臨數十萬至數百萬日圓的自費搜救帳單。"
-        ]
+        ],
+        "pre_season_plan": {
+          "title": "🏋️ L0 專項二：雪季前 4–6 週單板滑雪專項肌群與穩定度強化計畫 (4–6 Week Pre-Season Conditioning & Stability Program)",
+          "subtitle": "由國家隊體能總監 Alexei Volkov 與林敬軒博士共同設計：針對單板最常「受燒（乳酸暴衝鐵腿）」的股四頭肌離心控制、脛前肌/小腿抗疲勞、臀中肌防內扣與單腳三維本體感覺進行系統化打底",
+          "muscle_targets": [
+            {
+              "muscle": "① 股四頭肌離心收縮 & 臀中肌外展穩定 (Quadriceps Eccentric & Glute Medius)",
+              "snow_role": "【滑雪作用】承受 Heel-side 長時間微蹲與過彎 G 力緩衝，臀中肌拉住膝蓋避免「內扣 (Knee Valgus)」導致內側副韌帶 (MCL) 與前十字韌帶 (ACL) 撕裂，徹底預防滑兩趟大腿前側就如火燒般鐵腿。",
+              "exercises": "🔹 保加利亞分腿蹲 (Bulgarian Split Squat)：下放慢數 3 秒離心收縮、底部停頓 1 秒再推起（每腳 10–12 下 × 3 組）。\n🔹 靠牆靜蹲佐彈力帶外撐 (Banded Wall Sit)：大腿與地面平行、膝蓋套彈力帶向外微撐，維持 60–90 秒 × 3 組。"
+            },
+            {
+              "muscle": "② 脛前肌、比目魚肌與腓腸肌 (Tibialis Anterior, Soleus & Gastrocnemius)",
+              "snow_role": "【滑雪作用】Toe-side 腳尖刃需長時間微踮腳尖懸浮吸震（比目魚肌），Heel-side 則需脛前肌精準微調板刃角度；若肌耐力不足，第一天下午就會小腿前側與足弓劇烈抽筋受燒。",
+              "exercises": "🔹 靠牆勾腳尖訓練 (Tibialis Raises)：背部貼牆、雙腳前移 40cm，用力將腳尖向上勾起停留 2 秒、慢放 3 秒（20 下 × 3 組）。\n🔹 屈膝與直膝慢速提踵 (Bent & Straight-Knee Calf Raises)：針對比目魚肌與腓腸肌，3 秒上、3 秒下（15 下 × 3 組）。"
+            },
+            {
+              "muscle": "③ 抗旋轉核心與骨盆側向穩定肌群 (Obliques, Transverse Abdominis & QL)",
+              "snow_role": "【滑雪作用】在 L3 同軸轉彎與 L4–L5 上下身分離中，核心必須像鋼鐵軸心般鎖定骨盆與胸廓，避免轉彎時上半身甩肩反擰或被不整地雪包震散重心。",
+              "exercises": "🔹 側棒式抬腿/抬臀 (Side Plank with Hip Abduction)：強化腰方肌與臀中肌側向支撐（每側 45 秒 × 3 組）。\n🔹 死蟲式抗伸展 (Deadbug) / Pallof Press 抗旋轉推舉：核心死守肋骨下沉不拱腰（每側 12 下 × 3 組）。"
+            },
+            {
+              "muscle": "④ 單腳本體感覺、踝關節背屈與落地吸收 (Proprioception & Ankle Dorsiflexion)",
+              "snow_role": "【滑雪作用】腳踝背屈活動度決定你能不能做出標準 Low Position（而不折腰代償）；單腳動態穩定度則決定你在冰面、蘑菇與跳台落地時能否 0.1 秒救回平衡。",
+              "exercises": "🔹 單腳羅馬尼亞硬舉佐閉眼平衡 (Single-Leg RDL + Balance)：單腳微屈膝俯身，回正後單腳獨立穩定 15 秒（每腳 10 下 × 3 組）。\n🔹 橫向滑冰跳定點緩衝 (Lateral Skater Jumps with 3s Stick)：左右橫跳落地瞬間，三關節深蹲穩停 3 秒不動（每側 10 跳 × 3 組）。"
+            }
+          ],
+          "weekly_phases": [
+            {
+              "phase": "📅 第 1–2 週：關節活動度解鎖與等長肌耐力打底期 (Weeks 1–2: Mobility & Isometric Foundation)",
+              "frequency": "每週 3 次｜每次 30 分鐘",
+              "focus": "解開僵硬的腳踝背屈與髖關節，建立基礎靜態抗酸能力。",
+              "prescription": "① 跪姿壓牆踝關節背屈 (Knee-to-Wall：腳尖離牆 12–15cm 膝蓋觸牆，左右各 15 次) ➔ ② 靠牆靜蹲 60 秒 × 3 組 ➔ ③ 靠牆脛前肌勾腳尖 20 下 × 3 組 ➔ ④ 死蟲式核心 12 下 × 3 組。"
+            },
+            {
+              "phase": "📅 第 3–4 週：離心肌力強化與單腳三維穩定度期 (Weeks 3–4: Eccentric Strength & Unilateral Stability)",
+              "frequency": "每週 3–4 次｜每次 40 分鐘",
+              "focus": "強化下坡抗重力離心收縮（防大腿受燒）與單腳抗搖晃穩定度。",
+              "prescription": "① 保加利亞分腿蹲 (3秒慢下，每腳 12 下 × 3 組) ➔ ② 單腳 RDL 踩軟墊/折疊毛巾 (每腳 10 下 × 3 組) ➔ ③ 屈膝慢速提踵 (15 下 × 3 組) ➔ ④ 側棒式抬腿 (每側 45 秒 × 3 組)。"
+            },
+            {
+              "phase": "📅 第 5–6 週：雪道代謝抗酸與動態爆發吸震期 (Weeks 5–6: Slope Metabolic Anti-Burn & Plyometrics)",
+              "frequency": "每週 3–4 次｜每次 40 分鐘",
+              "focus": "模擬連續滑行 3 分鐘的高乳酸環境，讓雙腿具備「全天滑 15 趟不鐵腿、不受燒」的實戰體能。",
+              "prescription": "① Mini Leg Blaster 雪道抗酸循環（徒手深蹲 20 下 + 弓箭步各 10 下 + 跳躍弓箭步各 5 下 + 跳蹲 10 下，組間休 90 秒 × 3–4 輪）➔ ② 橫向滑冰跳單腳定點停 3 秒 (每側 10 跳 × 3 組) ➔ ③ 90 秒高低切換靠牆靜蹲。"
+            }
+          ]
+        },
+        "pre_ride_warmup": {
+          "title": "🔥 L0 專項三：每日上雪前 10 分鐘全身各部位動態暖身 SOP（預防運動傷害 & 避免大腿瞬間「受燒」鐵腿）",
+          "subtitle": "⚠️ 物理治療師鐵律：零下雪地嚴禁冷身直接做長時間靜態拉筋！務必採用「由上而下 + 穿靴實戰」6 大部位動態暖身，先把微血管與關節滑液打開，避免第一趟下坡就乳酸中毒（俗稱「大腿受燒 / Quad Burn」）或扭傷韌帶",
+          "zones": [
+            {
+              "part": "① 頸部與肩胛防摔保護區 (Neck & Shoulder Girdle)",
+              "risk": "防範後刃摔倒「甩鞭效應 (Whiplash)」頸部拉傷与前刃撲倒鎖骨/肩關節挫傷",
+              "drill": "【動態動作】雙手叉腰，頸部緩慢做前後點頭与左右半圓滾動各 8 次（嚴禁快速甩頭）；接著雙臂伸直做「前後大風車畫圓 × 15 次」與「擴胸夾背 × 15 次」，喚醒背部斜方肌與受身緩衝肌群。"
+            },
+            {
+              "part": "② 手腕與前臂防撐地骨折區 (Wrists & Forearms)",
+              "risk": "單板初學者第 1 名運動傷害為「跌倒手掌撐地導致遠端橈骨骨折 (FOOSH)」與手腕扭傷",
+              "drill": "【動態動作】十指緊扣，手腕順時針與逆時針畫「8字形旋轉」各 20 秒；接著雙手握拳再張開彈動 15 次，最後雙手交叉抱胸拍打雙肩 5 次——在腦中植入「跌倒瞬間握拳抱胸、絕對不伸手撐地」的神經反射。"
+            },
+            {
+              "part": "③ 胸椎旋轉與核心抗反擰區 (Thoracic Spine & Core)",
+              "risk": "胸椎若僵硬，轉彎時就會用「腰椎硬折」代償導致下背痛與失控反擰",
+              "drill": "【動態動作】雙手抱胸或握雪板置於胸前，做「弓箭步跨步轉體 (Lunge with Thoracic Twist)」左右各 10 次；接著雙腳與肩同寬做「動態早安躬身 (Good Mornings) × 10 次」，喚醒腹橫肌與豎脊肌。"
+            },
+            {
+              "part": "④ 髖關節三維開展與臀肌喚醒區 (3D Hips & Glutes)",
+              "risk": "髖關節卡死會讓你無法做出真 Low Position，且不整地劈腿易拉傷內收肌群（鼠蹊部）",
+              "drill": "【動態動作】單手扶同伴肩膀或雪板，單腳做「前後大幅度擺腿 × 15 次」與「左右橫向擺腿 × 15 次」；接著做「跨欄開髖畫圓 (Hip Openers) 左右各 10 次」與「哥薩克側蹲 (Cossack Squat) 左右各 8 次」。"
+            },
+            {
+              "part": "⑤ 膝關節與股四頭肌「防受燒」充血預熱區 (Knees & Quads Anti-Burn)",
+              "risk": "未預熱直接滑長距離雪道，股四頭肌微血管來不及擴張，會在 2 分鐘內缺氧乳酸暴衝（「受燒」鎖死失去控制力）",
+              "drill": "【防受燒神技】上纜車前做「1.5 蹲動態脈衝 (Squat Pulses)：蹲到底 ➔ 起身一半 ➔ 再蹲到底 ➔ 完全站起 × 15 次」+「原地開合跳或後踢臀跑 30 秒」，讓大腿微微發熱充血（打開有氧代謝通道），且當日第一趟務必先滑綠線緩坡做大弧度暖機！"
+            },
+            {
+              "part": "⑥ 腳踝背屈與穿雪靴壓靴舌傳導區 (Ankles & In-Boot Flex)",
+              "risk": "雪靴綁太緊或腳踝未活動開，會導致小腿前側脛前肌與足底筋膜在 30 分鐘內劇痛抽筋",
+              "drill": "【穿靴後必做】雙腳穿入雪靴並扣上前腳固定器後，原地進行「小腿壓破靴舌 (Toe Flex) ⇄ 臀部微坐高背 (Heel Sit) 動態交替搖擺 × 20 次」，確認膝蓋能順暢推過腳尖且腳跟不浮起，再開始單腳推板滑行。"
+            }
+          ]
+        }
       },
       "skills": [
         {
@@ -399,6 +493,10 @@
         {
           "name": "4. 緊急事故處置與日本雪場救援通報 (Accident Response & Ski Patrol Alert)",
           "steps": "若自己或同伴受傷無法移動：(1) 立刻在傷者『上方 5–10 公尺處』將雪板倒插在雪地排成『X字形』作為警示標誌，防止後方滑手追撞；(2) 記下最近一根雪道邊緣標竿上的編號（如 Course A - #12），撥打雪票背面的巡邏隊救援專線 (パトロール)。"
+        },
+        {
+          "name": "5. 雪季前 4–6 週離心肌力打底與上雪前 10 分鐘防受燒動態暖身 (Pre-Season Conditioning & Pre-Ride Anti-Burn Warm-Up)",
+          "steps": "出發前 4–6 週每週執行 3 次『保加利亞分腿蹲 (3秒慢下) + 靠牆靜蹲 + 脛前肌勾腳 + 單腳 RDL 平衡』；每日上雪搭第一趟纜車前，完成全身 6 大部位（頸肩、手腕8字、胸椎、3D開髖、1.5蹲預熱充血、穿靴壓靴舌）10 分鐘動態暖身。"
         }
       ],
       "awareness": {
