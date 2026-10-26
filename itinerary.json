@@ -316,10 +316,10 @@
         "Liam Vance (CASI Lv4)",
         "Wolfgang Bauer (器材調校)"
       ],
-      "coach_summary": "踏上雪場的第一步不是穿雪板，而是懂得『如何聰明買雪票不浪費錢』、『絕對不坐在雪道中間害人害己』以及『入境隨俗的日本雪場禮儀』。20位教練特別針對初學者整理 L0 零踩雷生存守則：選對 4 小時時間券或點數券，第 1 天就能省下 40% 雪票費；遵守 FIS 雪道十誡與日本餐廳溫泉規矩，讓你成為受人尊敬的滑雪人。",
-      "image_key": "stance",
+      "coach_summary": "【THE SNOWBOARD MASTERY BIBLE · 20位跨領域單板專業教練團隊共編總序】本書由加拿大 CASI、美國 AASI、日本 JSBA / SAJ、歐洲 Swoard EC 極限刻滑、X-Games 公園國家隊教練、北海道粉雪嚮導與運動生物力學博士組成的「20人教練智庫」共編，完整統整為 L0–L8 九大進階階段。踏上雪場的第一步不是穿雪板，而是懂得「如何聰明買雪票不浪費錢（特別是首刷閘門才起算的 4小時彈性時間券）」、「絕對不坐在雪道中間或盲坡折角下方」以及「入境隨俗的日本雪場禮儀」。",
+      "image_key": "photo_l0",
       "image_caption": "圖 L0-A｜日本雪場出發前準備：安全帽、雪鏡、防摔護具與左臂 IC 雪票卡 / Fig. L0-A | Pre-Ride Setup: Helmet, Goggles, Impact Shorts & Left-Arm RFID Lift Pass",
-      "infographic_key": "infographic_l0_l1",
+      "infographic_key": "infographic_l0",
       "infographic_caption": "圖 L0-B｜L0–L1 新手雪場生存與基本站姿技術藍圖 / Fig. L0-B | L0–L1 Resort Survival, 3-Joint Stance & Chairlift Blueprint",
       "svg_type": "l0_resort_etiquette",
       "svg_caption": "圖 L0-C｜雪道安全停靠區域（兩側綠區 ✔ vs 盲區紅叉 ✖）與 4小時雪票計時圖 / Fig. L0-C | Safe Slope Stopping Margins vs Blind Rollover & 4-Hour Flex Pass Logic",
@@ -483,7 +483,7 @@
         "渡邊健太郎 (體感教學)"
       ],
       "coach_summary": "L1 是決定初學者會『愛上滑雪』還是『第一天手腕骨折或被纜車撞到懷疑人生』的分水嶺！針對初學者最恐懼的兩大難關——『坐在雪地上爬不起來耗盡體力』與『上下吊椅纜車 (Chairlift) 摔倒卡在出口』，教練團在本章特別強化【翻身跪姿 Toe-side 省力站起法】與【上下纜車 8 步零摔倒 SOP】，上纜車前務必在平地練熟！",
-      "image_key": "stance",
+      "image_key": "photo_l1",
       "image_caption": "圖 L1-A｜標準基本運動站姿：踝、膝、髖三關節等比微彎，脊柱直立 / Fig. L1-A | Athletic Basic Stance: Stacked Ankle-Knee-Hip Flexion & Upright Spine",
       "svg_type": "stance_biomechanics",
       "svg_caption": "圖 L1-C｜L1 生物力學軸線與足底壓力分布解剖圖 / Fig. L1-C | Stacked Biomechanical Alignment vs Waist-Bending Error",
@@ -576,7 +576,7 @@
         "snow_track_check": "J-Turn 尾端雪痕呈現平滑上彎的『J字鉤』，代表並非靠暴力橫推，而是真正運用邊刃弧度自然迴轉減速。",
         "video_self_check": "側面錄影檢查：滑行時『耳垂—肩峰—大轉子(髖)—膝關節—外踝』呈現均衡的閃電狀微屈折線，而非屁股向後突出的『ㄑ字折腰』。"
       },
-      "infographic_key": "infographic_l0_l1",
+      "infographic_key": "infographic_l1",
       "infographic_caption": "圖 L1-B｜L1 初學者運動站姿、安全受身與上下纜車零摔倒資訊圖 / Fig. L1-B | L1 Athletic Stance, Ukemi Safe Falling & Chairlift Unloading Blueprint",
       "visual_logic_gallery": [
         {
@@ -647,7 +647,7 @@
         "渡邊健太郎 (體感教學)"
       ],
       "coach_summary": "L2 的核心不是『把雪推開』，而是建立『板刃立刃角度 (Edge Angle) = 煞車力道』的精準油門與煞車感。當你能同時掌控前後刃的推坡與落葉飄（Falling Leaf），你在綠線雪道就擁有 100% 的速度安全感。",
-      "image_key": "stance",
+      "image_key": "photo_l2",
       "image_caption": "圖 L2-A｜雙刃穩定控制：保持雙肩與雪板平行，踝膝微調立刃角 / Fig. L2-A | Dual-Edge Control: Shoulders Parallel to Board & Smooth Edge Angle Modulation",
       "svg_type": "edge_angle_falling_leaf",
       "svg_caption": "圖 L2-C｜立刃力學夾角（15° 滑移 vs 40° 煞停）與落葉飄微笑軌跡圖 / Fig. L2-C | Edge Angle Modulation (15° vs 40°) & Falling Leaf Smile Trajectory",
@@ -735,7 +735,7 @@
         "snow_track_check": "落葉飄留下的雪痕在左右兩端皆呈現微向上翹的『微笑曲線 (Smile Curve)』，代表是靠立刃弧度自然減速，而非死推到底。",
         "video_self_check": "正面/背面錄影檢查：Toe-side 時髖關節（臀部）沒有向後突出，肩膀至膝蓋呈現一直線微微傾倒向山坡。"
       },
-      "infographic_key": "infographic_l2_edge",
+      "infographic_key": "infographic_l2",
       "infographic_caption": "圖 L2-B｜L2 雙刃推坡、落葉飄與 Garland 花環滑行全景技術資訊圖 / Fig. L2-B | L2 Sideslipping, Falling Leaf Smile Curve & Garland Drill Blueprint",
       "visual_logic_gallery": [
         {
@@ -784,7 +784,7 @@
         "Noah Sterling (影像分析)"
       ],
       "coach_summary": "從『只敢用單刃落葉飄』跨越到『雙刃切換 S-Turn』是單板生涯最激動人心的突破！20位教練一致指出：90% 新手換刃卡刃的原因只有兩個——『因為害怕加速而重心退到後腳 (Backseat)』以及『還沒轉過滾落線就急著換刃』。掌握【前腳壓重 60% ➔ 扭轉板體過滾落線 ➔ 提早換新刃】三部曲，S-Turn 將水到渠成。",
-      "image_key": "sturn",
+      "image_key": "photo_l3",
       "image_caption": "圖 L3-A｜S-Turn 連貫轉彎：滾落線前完成換刃，留下對稱圓潤 S 形軌跡 / Fig. L3-A | Linked S-Turns: Early Edge Change Before Fall Line & Symmetrical C-Arcs",
       "svg_type": "sturn_phases",
       "svg_caption": "圖 L3-C｜S-Turn 四階段時鐘換刃軌跡（10點提早換刃 ➔ 6點滾落線）示意圖 / Fig. L3-C | 4-Phase S-Turn Clock Trajectory & 10 O'Clock Early Edge Change",
@@ -880,7 +880,7 @@
         "snow_track_check": "回頭檢視雪痕：呈現連續圓弧狀的『S形寬帶』，且在每個彎的頂點過渡區沒有出現橫向暴衝刮雪的『直角Z字斷層』。",
         "video_self_check": "正後方跟拍檢查：(1) 換刃時前膝有明顯先動作；(2) 後手沒有甩過身體中線；(3) 過滾落線時臀部沒有往後腳方向塌陷。"
       },
-      "infographic_key": "infographic_l3_l4",
+      "infographic_key": "infographic_l3",
       "infographic_caption": "圖 L3-B｜L3–L4 滾落線前早換刃、板體螺旋扭轉與上下身分離全景技術藍圖 / Fig. L3-B | L3–L4 Early Edge Change, Torsional Twist & Upper/Lower Separation Blueprint",
       "visual_logic_gallery": [
         {
@@ -934,7 +934,7 @@
         "Noah Sterling (影像分析)"
       ],
       "coach_summary": "進入 L4 中高階滑行，特別融合小紅書超人氣教練【Sam單板】最受推崇的四大進階滑行訓練體系：『微順轉開放站姿、上下身分離之飛機平衡翼（端水盆練習）、三二一節奏控速與下沉收腿抽板換刃 (Down-Unweighting / Cross-Under)』，讓你徹底擺脫初學者的僵硬感，在紅藍陡道與窄道滑出如絲綢般流暢的鐘擺小迴轉與反腳 S-Turn！",
-      "image_key": "sturn",
+      "image_key": "photo_l4",
       "image_caption": "圖 L4-A｜中級動態轉彎與小迴轉：上半身朝向滾落線穩定，下肢鐘擺切換板刃 / Fig. L4-A | Dynamic Short Turns: Quiet Upper Body Facing Fall Line & Pendulum Lower Body",
       "svg_type": "up_vs_down_unweighting",
       "svg_caption": "圖 L4-C｜Up-Unweighting vs Down-Unweighting 垂直質心軌跡與壓力曲線對比圖 / Fig. L4-C | Up-Unweighting (Cross-Over) vs Down-Unweighting (Cross-Under) CoM Wave",
@@ -1022,7 +1022,7 @@
         "snow_track_check": "小迴轉雪痕呈現緊密、等距的波浪線，每個彎的刷雪區集中在滾落線正下方（早立刃、早減速），而非出彎後才急煞。",
         "video_self_check": "正面定點跟拍：(1) 肩膀連線始終與坡面平行且朝向鏡頭；(2) 雪板在身體左右兩側快速切換時，頭部高度幾乎保持水平。"
       },
-      "infographic_key": "infographic_l3_l4",
+      "infographic_key": "infographic_l4",
       "infographic_caption": "圖 L4-B｜L3–L4 下沉收腿抽板換刃 (Cross-Under)、窄道 3m 小迴轉與 1-5-8 加壓藍圖 / Fig. L4-B | Cross-Under Down-Unweighting, 3m Corridor Short Turns & 1-5-8 Pressure Blueprint",
       "visual_logic_gallery": [
         {
@@ -1088,7 +1088,7 @@
         "Wolfgang Bauer (調校技師)"
       ],
       "coach_summary": "Carving（刻滑/走刃）是單板滑行力學的皇冠明珠！本章針對雪友最渴望突破的【Low Position（真・低姿態 vs 假・折腰低姿態）】進行骨科級深度解剖，並完整收錄從入門 J-Carve、早換刃 Cross-Under、日式折曲刻滑、歐式極限 Push-Pull 推拉撫雪、日式 ラマ先生 (Rama) 板尾蓄力刻滑、海豚跳 (Dolphin Turn) 到反轉刻滑 (Reverse Turn) 等 8 大必練刻滑招式！",
-      "image_key": "hero_carve",
+      "image_key": "photo_l5",
       "image_caption": "圖 L5-A｜高傾角貼地刻滑：板刃立起達 60°–75°，身體大膽傾倒抵抗離心力 / Fig. L5-A | High-Angle Carving: 60°–75° Edge Angle, Deep Inclination & Zero-Skid Trench",
       "svg_type": "carving_physics",
       "svg_caption": "圖 L5-C｜推雪滑行 vs 純走刃刻滑鉛筆線物理學與傾倒/折曲軸線圖 / Fig. L5-C | Skidded Turn vs Pure Carved Pencil-Line Physics, Inclination & Angulation",
@@ -1184,7 +1184,7 @@
         "snow_track_check": "【法醫級雪痕檢驗】完美的刻滑雪痕像火車單軌一樣細膩深邃，在換刃點會看到舊刃線條末端與新刃線條起點呈現平行的『雙線交疊 30 公分』，代表極致平順的過渡。",
         "video_self_check": "慢動作檢視：(1) 彎心處膝蓋與髖部有明顯向彎外折曲 (Angulation) 而非全身僵直倒地；(2) 板尾與板頭經過完全相同的雪面座標點。"
       },
-      "infographic_key": "infographic_l5_carve",
+      "infographic_key": "infographic_l5",
       "infographic_caption": "圖 L5-B｜L5 刻滑專精技術藍圖：真假 Low Position、歐式 Push-Pull、海豚跳與 Reverse Turn / Fig. L5-B | L5 Carving Blueprint: True vs Fake Low Position, Push-Pull, Dolphin & Reverse Turn",
       "visual_logic_gallery": [
         {
@@ -1300,7 +1300,7 @@
         "Rama 佐藤 (刻滑平花融合)"
       ],
       "coach_summary": "平花（Ground Trick / グラトリ / Buttering）分成四大流派：【壓系 (Nori / Press)】、【抹轉系 (Drive / Roll)】、【連招回轉系 (Flow Combo: Owen / Sone)】與【彈跳高轉系 (Hajiki: Nollie & Andy 360/540/720)】。本章為你整理從零基礎必練的 Press / Ollie / Nollie，到平花入門必學四大名招（Compass、Drive Spin、Sone、Owen），一路到進階與超進階神招的 16 招完整分解百科！",
-      "image_key": "butter",
+      "image_key": "photo_l6",
       "image_caption": "圖 L6-A｜Nose Press 平衡支點鎖定：重心精準壓於前腳外側甜蜜點 / Fig. L6-A | Nose Press Balance Lock: CoM Stacked Over Outer-Binding Sweet Spot",
       "svg_type": "ground_trick_mechanics",
       "svg_caption": "圖 L6-C｜Ollie 四階段槓桿彈跳力學與 Press 10cm 甜蜜點支點解剖圖 / Fig. L6-C | 4-Step Ollie Leverage Mechanics & 10cm Press Sweet Spot Anatomy",
@@ -1412,7 +1412,7 @@
         "snow_track_check": "Ollie 起跳點在雪地上會留下一個短促有力的『板尾壓痕點』，接著是完全空白的飛行區，落地點為乾淨的雙腳平行線。",
         "video_self_check": "側面慢動作檢查：(1) 做 Press 時腰部沒有嚴重彎折，髖關節確實移出固定器外側；(2) 180/360 起跳瞬間上下半身軸線垂直於坡面，無歪軸斜飛。"
       },
-      "infographic_key": "infographic_l6_gt",
+      "infographic_key": "infographic_l6",
       "infographic_caption": "圖 L6-B｜L6 單板平花 (グラトリ) 四階 16 招全圖鑑技術藍圖 / Fig. L6-B | L6 Ground Trick (Gratori) 4-Tier, 16-Trick Master Blueprint (Press to Nollie 720)",
       "visual_logic_gallery": [
         {
@@ -1594,7 +1594,7 @@
         "金荷娜 (雪場安全隊長)"
       ],
       "coach_summary": "進入 Terrain Park（地形公園），安全與精準度就是生命線！Marcus 與 Chloe 教練特別強調：95% 的公園摔傷來自『速度不對（太慢砸在平台 Knuckle 上，或太快飛過頭 Flat Landing）』以及『在跳台唇口或 Box 上緊張立刃』。掌握 Smart Style 公園禮儀與 S-A-T-L 四階段飛躍法則，你就能安全享受飛翔與 Jibbing 的快感。",
-      "image_key": "park",
+      "image_key": "photo_l7",
       "image_caption": "圖 L7-A｜跳台 Straight Air 與 Indy Grab：主動將膝蓋收向胸口鎖定空中軸線 / Fig. L7-A | Park Jump Straight Air & Indy Grab: Active Knee Tuck to Chest in Mid-Air",
       "svg_type": "park_jump_satl",
       "svg_caption": "圖 L7-C｜跳台結構解剖（Lip 唇口平底 Pop ➔ Sweet Spot 黃金落地坡）示意圖 / Fig. L7-C | Jump Anatomy (Flat-Base Lip Pop ➔ Sweet-Spot Transition Landing)",
@@ -1690,7 +1690,7 @@
         "snow_track_check": "跳台起跳斜面上的雪痕必須是一條『寬度等於板寬的筆直平底印記』（代表 100% 平板起跳），落地坡則是乾淨切入無橫向砸地大坑。",
         "video_self_check": "跳台側面慢動作檢查：(1) 後輪離開 Lip 瞬間雙膝剛完成伸展 (Pop Timing 100%)；(2) 空中雪板與落地斜坡呈平行角度（無翹板頭後坐落地的 Backseat Landing）。"
       },
-      "infographic_key": "infographic_l7_l8",
+      "infographic_key": "infographic_l7",
       "infographic_caption": "圖 L7-B｜L7 公園跳台 S-A-T-L 拋物線、收腿抓板與 Box/Rail 道具全景資訊圖 / Fig. L7-B | L7 Park Jump S-A-T-L Trajectory, Grab Map & Box/Rail Jibbing Blueprint",
       "visual_logic_gallery": [
         {
@@ -1725,7 +1725,7 @@
         "Dr. Maya Lindholm (視覺心理學)"
       ],
       "coach_summary": "L8 是單板滑手邁向『全山自由 (All-Mountain Master)』的終極殿堂。面對志賀高原、八甲田或二世谷的 38° 黑線陡坡、深及腰部的 Japow 粉雪、密集的白樺樹林與巨大蘑菇包，你必須將前七階段的所有技巧融會貫通，演化出『三維衝浪浮力、雙膝活塞吸收、Jump Turn 陡坡瞬轉與超前 3 彎的戰術視覺』。",
-      "image_key": "powder",
+      "image_key": "photo_l8",
       "image_caption": "圖 L8-A｜日本白樺樹林深粉雪滑行 (Japow Tree Freeride)：三維衝浪配重與空隙導航 / Fig. L8-A | Japow Tree Freeride: 3D Surf Floatation & Optical Gap Navigation",
       "svg_type": "all_mountain_powder_moguls",
       "svg_caption": "圖 L8-C｜深粉雪三維浮力衝浪機制與蘑菇地形 (Moguls) 雙膝活塞吸收圖 / Fig. L8-C | Deep Powder 3D Dolphin Float & Mogul Piston Knee Absorption",
@@ -1829,7 +1829,7 @@
         "snow_track_check": "粉雪中留下一道深淺均勻、左右對稱的『優美正弦波浪溝（S-Wave）』，而非後尾深深犁地、前頭亂晃的失衡溝痕。",
         "video_self_check": "全山跟拍檢查：(1) 過蘑菇時頭部軌跡平滑如坐魔毯，雙腿在下方劇烈伸縮；(2) 陡坡入彎瞬間肩膀果斷壓向山下新前刃。"
       },
-      "infographic_key": "infographic_l7_l8",
+      "infographic_key": "infographic_l8",
       "infographic_caption": "圖 L8-B｜L8 大山全地形技術藍圖：蘑菇活塞吸收、深粉雪海豚衝浪與 40° 陡坡跳轉 / Fig. L8-B | L8 All-Mountain Blueprint: Mogul Piston Absorption, Deep Powder & 40° Jump Turn",
       "visual_logic_gallery": [
         {
