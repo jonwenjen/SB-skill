@@ -634,7 +634,7 @@
         },
         {
           "name": "3. 單腳蹬冰滑行與上下纜車預演 (Skating & One-Foot Glide)",
-          "steps": "前腳綁入固定器，後腳踩在雪板前側（Toe Edge 外側）或後側（Heel Edge 外側）小步推進，推進後將後腳平踩於後固定器內側防滑墊 (Stomp Pad) 上，練習前腳 60%、後腳 40% 的單腳直滑降與重心穩定。"
+          "steps": "前腳綁入固定器，後腳踩在雪板前側（Toe Edge 外側）或後側（Heel Edge 外側）小步推進；推進後將後腳平踩於兩固定器中間的防滑墊 (Stomp Pad) 上，且讓『後腳靴外側邊緣（小趾側）』緊緊頂住『後固定器內側底座』，練習前腳 60%–65%、後腳 35%–40% 的單腳直滑降與重心穩定。"
         },
         {
           "name": "4. 單腳爬坡與 J-Turn 緩坡轉向煞車 (Side-Stepping & J-Turn Stop)",
@@ -660,7 +660,7 @@
         ],
         "tips": [
           "💡 教練私房 Tip 1（生雞蛋口訣）：覺得自己一直在折腰彎腰嗎？想像你的『小腿脛骨與靴舌之間夾著一顆海綿球』，把膝蓋往前推去擠壓海綿球，腰背自然就挺直了！",
-          "💡 教練私房 Tip 2（單腳下纜車神技）：下纜車時，將後腳跟緊緊頂住『後固定器底座外側』，雙眼直視前方出口紅標，前腳給 65% 重量，雪板就會像火車走鐵軌一樣筆直穩定。"
+          "💡 教練私房 Tip 2（單腳下纜車神技）：下纜車時，先在空中將板頭轉正微翹（後腳保持懸空，切勿在空中先踩上雪板以免壓垂板頭鏟雪！）；待板底觸地滑行瞬間，後腳立刻踩上防滑墊並將『後腳靴外側邊緣』緊緊頂住『後固定器內側底座』，雙眼直視前方出口紅標，前腳給 65% 重量，雪板就會像火車走鐵軌一樣筆直穩定。"
         ]
       },
       "videos": [
@@ -718,8 +718,8 @@
         },
         {
           "svg_id": "l1_chairlift_sop",
-          "title": "圖解 L1-2｜初學者上下吊椅纜車 8步零摔倒動線與後腳跟頂固定器結構圖 / Fig. L1-2 | Chairlift Unloading SOP: Rear Heel Wedged Against Binding & Straight Glide",
-          "logic_note": "【中文】下纜車時『後腳跟死死頂住後固定器外側底座』形成三點卡榫，眼睛直視遠方 10m、前腳壓 65% 重量，讓板底 100% 平貼雪面筆直滑出，絕對不在斜坡扭腰轉向！<br><span class='text-sky-300/90'>【EN】When unloading the chairlift, wedge your free rear heel firmly against the outer baseplate of the rear binding for a 3-point lock. Look 10m ahead, keep 65% weight on your front foot, and glide straight out on a 100% flat base.</span>"
+          "title": "圖解 L1-2｜初學者上下吊椅纜車 (Chairlift) 8步零摔倒動線與後腳頂固定器內側結構圖 / Fig. L1-2 | Chairlift Unloading SOP: Touchdown Stomp Pad Lock Against Inside Rear Binding & Straight Glide",
+          "logic_note": "【中文】進站前空中先轉正板頭並保持後腳懸空（嚴禁空中踩板壓垂板頭！）；當板底 100% 平貼觸地瞬間，後腳立刻踩上防滑墊並以『後腳靴外緣緊頂後固定器內側底座』形成穩固卡榫，眼睛直視遠方 10m、前腳壓 65% 重量筆直滑出！<br><span class='text-sky-300/90'>【EN】Align the board straight in the air with your rear foot suspended (never step on the board in mid-air!). The instant the base touches down flat on the ramp, step onto the stomp pad and brace the outer edge of your rear boot firmly against the INSIDE baseplate of the rear binding. Look 10m ahead with 65% weight on your front foot and glide straight out.</span>"
         },
         {
           "svg_id": "l1_standup_mechanics",
@@ -747,16 +747,16 @@
             "detail": "坐穩後先喊一聲『Bar Down / 失礼します』再拉下安全護欄。在空中讓綁著雪板的前腳自然垂下（或把後腳尖墊在前腳雪板底下幫忙托住重量，減輕前腳踝負擔），切勿在空中大幅晃動雪板。"
           },
           {
-            "phase": "Step 5｜進站前 20 公尺預備 (Raise Bar & Straighten Board)",
-            "detail": "看到『Raise Bar（拉起護欄）』標誌時拉開護欄。在雙腳即將接觸地面前 3 公尺，做最重要的一個動作：『將後腳踏在雪板兩個固定器正中間的防滑墊 (Stomp Pad) 上，且後腳跟緊緊頂住後固定器外側底座』，並將板頭轉正對準正前方滑行方向！"
+            "phase": "Step 5｜進站前 15–20 公尺空中預備：拉起護欄、側坐挪臀、板頭轉正微翹 (Raise Bar, Shift Hips & Align Board in Air)",
+            "detail": "看到『Raise Bar（拉起護欄）』標誌時拉開護欄。將屁股微挪至吊椅坐墊前緣並稍微轉為側坐姿勢（朝向滑行方向），後手扶穩吊椅椅背或側桿；在空中先用前腳將雪板轉正（100% 對準正前方滑行軌道）並微勾前腳尖讓板頭略微上翹（防止板頭撞擊卸客平台斜坡前緣），此時後腳保持懸空準備，切勿在空中就先踩上雪板（空中踩板會壓垂板頭導致觸地瞬間鏟雪翻車）！"
           },
           {
-            "phase": "Step 6｜板底貼雪、雙手推椅站起 (Flat Base & Push Off)",
-            "detail": "當雪板『板底 100% 平貼接觸地面平台』的瞬間，上半身微向前傾，將 65% 重量壓在前腳上，雙手扶著吊椅坐墊順勢往前輕推站起（嚴禁在還沒站穩時就試圖轉彎或壓鋼邊煞車！）。"
+            "phase": "Step 6｜雪板觸地瞬間：後腳踩防滑墊頂住「後固定器內側」、推椅站起 (Touch Down, Step on Stomp Pad Against Inside Binding & Stand Up)",
+            "detail": "當雪板『板底 100% 平貼接觸卸客平台雪面』開始向前滑行的瞬間，立刻將懸空的後腳穩穩踏在兩固定器正中間的防滑墊 (Stomp Pad) 上，且讓『後腳靴外側邊緣（小趾側）』緊緊頂住『後固定器內側底座』（形成穩固卡榫鎖住板尾）；同時上半身微向前傾、將 65% 重量壓在前腳上，扶著吊椅坐墊順勢往前輕推站起（嚴禁在還沒站穩時就試圖轉彎或壓鋼邊煞車！）。"
           },
           {
             "phase": "Step 7｜火車鐵軌筆直滑出 (Straight Glide & Look Ahead)",
-            "detail": "站起後，吊椅會在背後推你一把加速——此時絕對不要慌張低頭看腳！保持雙膝微彎、前腳壓重 65%、後腳跟頂死後固定器、雙眼死死盯著正前方 10 公尺遠處，讓雪板像火車走鐵軌一樣完全平底筆直滑下卸客斜坡。"
+            "detail": "站起後，吊椅會在背後推你一把加速——此時絕對不要慌張低頭看腳！保持雙膝微彎、前腳壓重 65%、後腳靴外緣頂緊後固定器內側底座、雙眼直視正前方 10 公尺遠處，讓雪板像火車走鐵軌一樣完全平底（Flat Base）筆直滑下卸客斜坡。"
           },
           {
             "phase": "Step 8｜自然減速或單腳微壓刃停靠 (J-Stop & Clear the Exit Zone)",
